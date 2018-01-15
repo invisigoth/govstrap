@@ -34,6 +34,18 @@ function govstrap_process_html_tag(&$variables) {
 }
 
 /**
+ * Implements hook_process_page().
+ */
+function govstrap_process_page(&$variables) {
+  // Make search form available to page.tpl.php
+  $search_box = drupal_get_form('search_block_form');
+  $variables['search_box'] = drupal_render($search_box);
+  // Accessibility settings.
+  $variables['skip_link_anchor'] = check_plain(theme_get_setting('govstrap_skip_link_anchor'));
+  $variables['skip_link_text'] = check_plain(theme_get_setting('govstrap_skip_link_text'));
+}
+
+/**
  * Implements hook_process_block().
  */
 function govstrap_process_block(&$variables, $hook) {

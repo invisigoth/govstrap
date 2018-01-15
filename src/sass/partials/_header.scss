@@ -1,30 +1,136 @@
 html {
   body.html {
-
+    #skip-link a, #skip-link a:visited {
+      display: block;
+      width: 100%;
+      padding: 2px 0 3px;
+      text-align: center;
+      background-color: $darkGrey;
+      color: $lightGrey;
+      border-bottom: 1px solid $lightGrey;
+      text-decoration: underline;
+    }
     #header {
-
-      .container {
-        position: relative;
-        height: 100%;
-        #crest {
+      .navbar-main {
+        height: 80px;
+        background: $ncaBlack;
+        .container {
+          position: relative;
+          height: 100%;
+          #crest {
+            position: absolute;
+            left: 15px;
+            @media screen and (max-width: 768px) {
+              left: 0;
+            }
+            top: 0;
+            bottom: 0;
+            display: block;
+            text-indent: -9999px;
+            overflow: hidden;
+            background-image: url("../img/nca-logo.svg");
+            background-position: center center;
+            background-repeat: no-repeat;
+            width: 203px;
+            background-size: 100% auto;
+            @media screen and (max-width: 992px) {
+              width: 180px;
+            }
+          }
+        }
+        #topbar-search {
           position: absolute;
-          left: 15px;
-          @media screen and (max-width: 768px) {
-            left: 0;
+          right: 15px;
+          top: 19px;
+          @media (min-width: $screen-md-min) {
+            background: $ncaOrange;
+            color: $ncaWhite;
           }
-          top: 0;
-          bottom: 0;
-          display: block;
-          text-indent: -9999px;
-          overflow: hidden;
-          background-image: url("../img/nca-logo.png");
-          background-position: center center;
-          background-repeat: no-repeat;
-          width: 203px;
-          background-size: 100% auto;
-          @media screen and (max-width: 992px) {
-            width: 180px;
+          form#search-block-form {
+            .form-item {
+              input.form-text {
+                padding: 0 10px;
+                width: 200px;
+                border-right: none;
+                border-radius: $borderRadius 0 0 $borderRadius;
+                font-weight: normal !important;
+                border-right: 0 !important;
+                &:focus {
+                  background: #fff !important;
+                  color: $darkGrey !important;
+                }
+                @media screen and (max-width: 992px) {
+                  width: 220px;
+                }
+              }
+            }
+            input.form-submit {
+              transition: all 0.2s;
+              width: 42px;
+              border-radius: 0 $borderRadius $borderRadius 0;
+              border-left: none;
+              background: $ncaBlack;
+              padding-left: 0;
+              text-indent: 11px;
+              letter-spacing: 2em;
+              font-size: 20px;
+              color: #fff;
+              overflow: hidden;
+              //@include nca-icons;
+              &:hover,
+              &:active,
+              &:focus {
+                background-color: lighten($ncaOrange, 20%);
+              }
+            }
+            .form-item input.form-text, input.form-submit {
+              display: block;
+              position: relative;
+              float: left;
+              border: 1px solid #eeeeee;
+              height: 42px;
+            }
+
+            ::-webkit-input-placeholder {
+              color: $placeholder;
+              opacity: 1;
+            }
+            input:active::-webkit-input-placeholder,
+            input:focus::-webkit-input-placeholder {
+              color: $placeholderActive;
+              opacity: 1;
+            }
+            :-moz-placeholder {
+              // Firefox 18-
+              color: $placeholder;
+              opacity: 1;
+            }
+            ::-moz-placeholder {
+              // Firefox 19+
+              color: $placeholder;
+              opacity: 1;
+            }
+            input:active:-moz-placeholder,
+            input:focus:-moz-placeholder {
+              color: $placeholderActive;
+              opacity: 1;
+            }
+            input:active::-moz-placeholder,
+            input:focus::-moz-placeholder {
+              color: $placeholderActive;
+              opacity: 1;
+            }
+            :-ms-input-placeholder {
+              color: $placeholder;
+              opacity: 1;
+            }
+            input:active:-ms-input-placeholder,
+            input:focus:-ms-input-placeholder {
+              color: $placeholderActive;
+              opacity: 1;
+            }
           }
+          // End search form
         }
       }
     }

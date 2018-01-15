@@ -52,10 +52,6 @@ function govstrap_preprocess_html(&$variables, $hook) {
     drupal_add_js($fontawesome, array('type' => 'external', 'defer' => TRUE));
   }
 
-  // Accessibility settings.
-  $variables['skip_link_anchor'] = check_plain(theme_get_setting('govstrap_skip_link_anchor'));
-  $variables['skip_link_text'] = check_plain(theme_get_setting('govstrap_skip_link_text'));
-
   // Attributes for html element.
   $variables['html_attributes_array'] = array(
     'lang' => $variables['language']->language,

@@ -5,7 +5,6 @@
  */
 ?>
 <?php include 'includes/header.tpl.php'; ?>
-
 <nav id="navigation" class="<?php print $container_class; ?>">
   <?php print render($page['navigation']); ?>
 </nav><!-- /#navigation -->
