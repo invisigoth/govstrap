@@ -9,7 +9,9 @@
 
     Drupal.behaviors.govstrap = {
         attach: function (context, settings) {
-            // Site scripts.
+          function navToggle() {
+
+          }
         }
     };
 

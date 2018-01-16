@@ -23,7 +23,7 @@
                                 <a href="/contact-us"><i class="icon-phone"></i> Contact us</a>
                             </div>
                             <div id="topbar-menu" class="col-lg-3">
-                                <a href="javascript:null;" role="button">
+                                <a href="javascript:navToggle();" role="button">
                                     <span id="nav-toggle">
                                         <i></i>
                                         <i></i>
