@@ -1,0 +1,50 @@
+@font-face {
+	font-family: "govstrap-icons";
+	src: url('../fonts/govstrap-icons.eot');
+	src: url('../fonts/govstrap-icons.eot?#iefix') format('eot'),
+		url('../fonts/govstrap-icons.woff') format('woff'),
+		url('../fonts/govstrap-icons.ttf') format('truetype'),
+		url('../fonts/govstrap-icons.svg#govstrap-icons') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "govstrap-icons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+
+	font-family: "govstrap-icons";
+	font-style: normal;
+	display: inline-block;
+	text-decoration: inherit;
+	width: 1em;
+	margin-right: .2em;
+	text-align: center;
+
+	/* For safety - reset parent styles, that can break glyph codes*/
+	font-variant: normal;
+	text-transform: none;
+
+	/* fix buttons height, for twitter bootstrap */
+	line-height: 1em;
+
+	/* Animation center compensation - margins should be symmetric */
+	/* remove if not needed */
+	margin-left: .2em;
+
+}
+
+.icon-phone:before {
+	content: "\e942";
+}
+.icon-mail:before {
+	content: "\f003";
+}

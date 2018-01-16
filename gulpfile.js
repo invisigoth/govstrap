@@ -267,6 +267,10 @@ gulp.task('default', ['images', 'scripts', 'modernizr', 'styles']);
 
 // Watch changes.
 gulp.task('watch', ['images', 'scripts', 'modernizr', 'styles'], function() {
+  // Watch for Sass changes.
+  gulp.watch('./src/sass/govstrap/*.scss', function() {
+    gulp.start('styles');
+  });
   // Watch for img optim changes.
   gulp.watch('./src/img/**', function() {
     gulp.start('images');
@@ -281,6 +285,10 @@ gulp.task('watch', ['images', 'scripts', 'modernizr', 'styles'], function() {
   });
   // Watch for Sass changes.
   gulp.watch('./src/sass/*.scss', function() {
+    gulp.start('styles');
+  });
+  // Watch for Sass changes.
+  gulp.watch('./src/sass/partials/*.scss', function() {
     gulp.start('styles');
   });
   // Watch for master Favicon changes.

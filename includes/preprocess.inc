@@ -72,6 +72,11 @@ function govstrap_preprocess_html(&$variables, $hook) {
     }
     $variables['rdf_namespaces'] = ' prefix="' . implode(' ', $prefixes) . '"';
   }
+
+  if (drupal_is_front_page()) {
+    $variables['head_title'] = variable_get('site_name', 'National Capital Authority');
+  }
+
 }
 
 /**
