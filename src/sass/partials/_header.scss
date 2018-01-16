@@ -13,7 +13,9 @@ html {
     #header {
       .navbar {
         background: $ncaBlack;
+        border: none;
         border-radius: 0;
+        margin-bottom: 0;
         .container {
           .navbar-header {
             position: relative;

@@ -1,57 +1,101 @@
 /*
  * Main navigation menu styles
  */
-
-#block-menu-block-2 {
-  background: lighten($ncaBlack, 10%);
-  font-family: "Roboto Condensed", Arial, sans-serif;
-  font-weight: 400;
-  display: table;
-  width: 32%;
-  position: relative;
-  margin-bottom: -10000px;
-  padding-bottom: 10000px;
-  padding-left: 2em;
-  padding-top: 4em;
-  & > .content > .menu-block-wrapper > .menu {
-    display: table;
-    // Commons
-    li {
-      list-style: none !important;
-    }
-    // Top level
-    float: left;
-    & > li > a {
-      text-transform: uppercase;
-      font-size: 1.3em;
-      color: $ncaWhite;
-    }
-    // 2nd level
-    & > li > ul {
-      background: lighten($ncaBlack, 20%);
-      & > li > a {
-        font-size: 1.1em;
-        font-weight: 400;
-        color: $ncaWhite;
+nav#navigation {
+  background: lighten($ncaBlack, 5%);
+  border-top: 1px solid $darkGrey;
+  padding: 50px 0;
+  .region-navigation {
+    #block-menu-block-2 {
+      font-family: "Roboto Condensed", Arial, sans-serif;
+      font-weight: 300;
+      display: table;
+      width: 32%;
+      position: relative;
+      margin-bottom: -10000px;
+      padding-bottom: 10000px;
+      & > .content > .menu-block-wrapper > .menu {
+        display: table;
+        padding-left: 15px;
+        width: 100%;
+        // Commons
+        li {
+          list-style: none !important;
+        }
+        // Top level
+        & > li {
+          line-height: 32px;
+          &.expanded > a:after {
+            font-family: "govstrap-icons";
+            content: '\ea3c';
+            float: right;
+            padding-right: 16px;
+            font-size: 16px;
+          }
+          & > a {
+            text-transform: uppercase;
+            font-size: 1.2em;
+            color: $mediumGrey;
+            line-height: 3em;
+          }
+        }
+        // 2nd level
+        & > li > ul {
+          border-left: 1px solid $darkGrey;
+          & > li {
+            padding: 5px 0;
+            &.expanded > a:after {
+              font-family: "govstrap-icons";
+              content: '\ea3c';
+              float: right;
+              padding-right: 8px;
+              font-size: 16px;
+            }
+            & > a {
+              font-size: 1.1em;
+              color: $mediumGrey;
+            }
+          }
+          & > li:first-of-type {
+            padding-top: 12px;
+          }
+        }
+        // 3rd level
+        & > li > ul > li > ul {
+          border-left: 1px solid $darkGrey;
+          & > li {
+            & > a {
+              font-size: 1em;
+              color: $mediumGrey;
+            }
+          }
+          & > li:first-of-type {
+            padding-top: 12px;
+          }
+        }
+        // 2nd+ level
+        & > li ul {
+          display: none;
+          visibility: hidden;
+          padding: 0px 16px 9px 16px !important;
+          display: table !important;
+          width: 100% !important;
+          position: absolute;
+          left: 100%;
+          top: 0;
+        }
+        // Active links
+        a.active-trail, a.active {
+          color: lighten($ncaOrange, 20%);
+        }
+        & > li.active-trail > ul,
+        & > li.active > ul,
+        & > li.active-trail > ul > li.active-trail > ul,
+        & > li.active > ul > li.active > ul {
+          display: block;
+          visibility: visible;
+        }
       }
     }
-    // 3rd level
-    & > li > ul > li > ul {
-      background: lighten($ncaBlack, 30%);
-      & > li > a {
-        font-size: 1em;
-        color: $ncaWhite;
-      }
-    }
-    // 2nd+ level
-    & > li ul {
-      padding: 0 8px 9px 0 !important;
-      display: table !important;
-      width: 100% !important;
-      position: absolute;
-      left: 100%;
-      top: 0;
-    }
-
   }
 }
