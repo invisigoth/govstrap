@@ -1,0 +1,73 @@
+vagrant_hostname:               govcms7-nca-vm.test
+vagrant_machine_name:           govcms7_nca_vm
+vagrant_ip:                     0.0.0.0
+
+vagrant_synced_folders:
+  # The first synced folder will be used for the default Drupal installation, if
+  # any of the build_* settings are 'true'. By default the folder is set to
+  # the drupal-vm folder.
+  - local_path:                 ./box/drupal-vm/instance
+    destination:                /var/www/drupalvm
+    type:                       nfs
+    create:                     true
+
+  - local_path:                 .
+    destination:                /var/www/drupal-theme
+    type:                       rsync
+    create:                     true
+    excluded_paths:
+      - .git
+      - .vagrant
+      - vendor
+      - box
+
+vagrant_plugins:
+  - name:                       vagrant-vbguest
+  - name:                       vagrant-hostsupdater
+  - name:                       vagrant-auto_network
+
+drupal_build_makefile:          true
+drush_makefile_path:            "{{ config_dir }}/drupal.make.yml"
+drush_make_options:             "--no-gitinfofile"
+
+drupal_build_composer:          false
+drupal_composer_install_dir:    /var/www/drupalvm
+
+drupal_build_composer_project:  false
+
+drupal_install_site:            false
+
+# Required Drupal settings.
+drupal_core_path:               "{{ drupal_composer_install_dir }}/web"
+drupal_db_user:                 govcms
+drupal_db_password:             govcms
+drupal_db_name:                 govcms7_nca
+drupal_db_host:                 localhost
+
+drupal_major_version:           7
+drupal_site_name:               "govCMS7"
+drupal_install_profile:         govcms
+
+configure_drush_aliases:        false
+
+installed_extras:
+  - drush
+  - mailhog
+  - solr
+  - upload-progress
+
+extra_packages:
+  - htop
+  - unzip
+
+php_version:                    "5.6"
+php_packages_extra:
+  - "php{{ php_version }}-bz2"
+  - "php{{ php_version }}-zip"
+  - "php{{ php_version }}-imagick"
+  - imagemagick
+php_memory_limit:               "192M"
+
+post_provision_scripts:
+  - "../../../../box/drupal-vm/scripts/configure-solr.sh"
+  - "../../../../box/drupal-vm/scripts/post-provision.sh"
