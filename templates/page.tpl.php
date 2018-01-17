@@ -9,7 +9,9 @@
     <div class="<?php print $container_class; ?>">
         <?php print render($page['navigation']); ?>
     </div>
-</nav><!-- /#navigation -->
+</nav>
+<div id="mobile-overlay"></div>
+<!-- /#navigation -->
 
 <main>
   <div id="main" class="main-container <?php print $container_class; ?>">

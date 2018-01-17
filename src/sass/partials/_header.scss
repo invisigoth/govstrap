@@ -41,7 +41,7 @@ html {
               color: $ncaWhite;
               font-family: "Roboto Condensed", Arial, sans-serif;
               font-weight: 700;
-              font-size: 18px;
+              font-size: 20px;
               &:hover, &:focus {
                 text-decoration: none;
               }
@@ -52,7 +52,7 @@ html {
             &:hover {
               background: darken($ncaBlue, 5%);
             }
-            #nav-toggle {
+            #nav-toggle-burger {
               margin-top: 29px;
               display: inline-block;
               i {
