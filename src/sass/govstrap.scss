@@ -11,6 +11,8 @@
 @import 'govstrap/global';
 // Fonts, text size etc.
 @import 'govstrap/typography';
+// Custom icons
+@import 'govstrap/icons';
 // All elements, such as btns, wells, etc
 @import 'govstrap/elements';
 // base responsive styles for govStrap styles
@@ -34,3 +36,4 @@
 @import "partials/header";
 @import "partials/navigation";
 @import "partials/content";
+@import "partials/_homepage";

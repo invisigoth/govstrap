@@ -29,6 +29,10 @@ html {
               img {
                 width: 220px;
                 height: 53px;
+                @media screen and (max-width: $screen-xs-max) {
+                  width: 200px;
+                  height: 48px;
+                }
               }
             }
           }
@@ -40,7 +44,7 @@ html {
             a {
               color: $ncaWhite;
               font-family: "Roboto Condensed", Arial, sans-serif;
-              font-weight: 700;
+              font-weight: 300;
               font-size: 20px;
               &:hover, &:focus {
                 text-decoration: none;
@@ -78,7 +82,7 @@ html {
             form#search-block-form {
               .form-item {
                 input.form-text {
-                  background: $ncaOrange;
+                  background: $ncaBlack;
                   padding: 0 10px;
                   width: 212px;
                   border-right: none;
@@ -89,13 +93,16 @@ html {
                     background: #fff !important;
                     color: $darkGrey !important;
                   }
-                  @media screen and (max-width: 992px) {
+                  @media screen and (min-width: $screen-md-min) {
                     width: 220px;
+                  }
+                  @media screen and (max-width: $screen-sm-max) {
+                    width: 160px;
                   }
                 }
               }
               input.form-submit {
-                background: $ncaOrange;
+                background: $ncaBlack;
                 font-family: "govstrap-icons", sans-serif;
                 transition: all 0.2s;
                 width: 42px;
@@ -118,7 +125,7 @@ html {
                 display: block;
                 position: relative;
                 float: left;
-                border: 2px solid #eee;
+                border: 2px solid $ncaOrange;
                 height: 42px;
                 margin-top: 18px;
               }

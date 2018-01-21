@@ -1,6 +1,9 @@
 html {
   body {
     main {
+      .highlighted {
+        padding: 0;
+      }
       background: $lightGrey;
       #page-content {
         background: $ncaWhite;

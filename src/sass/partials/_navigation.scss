@@ -5,7 +5,10 @@ nav#navigation {
   display: none; // Initial state: hidden
   background: lighten($ncaBlack, 5%);
   border-top: 1px solid $darkGrey;
-  padding: 50px 0;
+  padding: 20px 0;
+  @media (min-width: $screen-sm-min) {
+    padding: 50px 0;
+  }
   position: absolute;
   width: 100%;
   z-index: 999;
@@ -14,11 +17,14 @@ nav#navigation {
     #block-menu-block-2 {
       font-family: "Roboto Condensed", Arial, sans-serif;
       font-weight: 300;
-      display: table;
-      width: 32%;
       position: relative;
       margin-bottom: -10000px;
       padding-bottom: 10000px;
+      @media (min-width: $screen-sm-min) {
+        width: 32%;
+        display: table;
+      }
+
       & > .content > .menu-block-wrapper > .menu {
         display: table;
         width: 100%;
@@ -27,7 +33,9 @@ nav#navigation {
         li {
           list-style: none !important;
           a {
-            display: block;
+            @media (min-width: $screen-sm-min) {
+              display: block;
+            }
             width: 100%;
             &:hover, active, visited {
               text-decoration: none;
@@ -42,15 +50,27 @@ nav#navigation {
               color: $ncaBlack;
             }
           }
+          &.expanded {
+            .icon-rarrow {
+              float: right;
+              font-size: 1.2em;
+              color: $ncaWhite;
+              @media (min-width: $screen-sm-min) {
+                display: none;
+              }
+            }
+          }
         }
         // Top level
         & > li {
           padding: 12px 16px;
-          &.expanded > a:after {
-            font-family: "govstrap-icons";
-            content: '\ea3c';
-            float: right;
-            font-size: 16px;
+          @media (min-width: $screen-sm-min) {
+            &.expanded > a:after {
+              font-family: "govstrap-icons";
+              content: '\ea3c';
+              float: right;
+              font-size: 16px;
+            }
           }
           & > a {
             text-transform: uppercase;
@@ -60,29 +80,35 @@ nav#navigation {
         }
         // 2nd level
         & > li > ul {
-          border-left: 1px solid $darkGrey;
+          @media (min-width: $screen-sm-min) {
+            border-left: 1px solid $darkGrey;
+          }
           & > li {
-            padding: 13px 16px;
-            &.expanded > a:after {
-              font-family: "govstrap-icons";
-              content: '\ea3c';
-              float: right;
-              font-size: 16px;
-            }
+            padding: 12px 16px;
             & > a {
-              font-size: 1.1em;
+              font-size: 1.2em;
               color: $mediumGrey;
+            }
+            @media (min-width: $screen-sm-min) {
+              &.expanded > a:after {
+                font-family: "govstrap-icons";
+                content: '\ea3c';
+                float: right;
+                font-size: 16px;
+              }
             }
           }
         }
         // 3rd level
         & > li > ul > li > ul {
-          border-left: 1px solid $darkGrey;
+          @media (min-width: $screen-sm-min) {
+            border-left: 1px solid $darkGrey;
+          }
           & > li {
-            padding: 14px 16px;
+            padding: 12px 16px;
             & > a {
-              font-size: 1em;
               color: $mediumGrey;
+              font-size: 1.2em;
             }
           }
         }
@@ -94,6 +120,13 @@ nav#navigation {
           position: absolute;
           left: 100%;
           top: 0;
+          @media (max-width: $screen-xs-max) {
+            z-index: 11;
+            background: lighten($ncaBlack, 5%);
+            top: 0;
+            left: 0;
+            height: 100%;
+          }
           li {
             margin-left: 0;
           }
@@ -108,7 +141,17 @@ nav#navigation {
         & > li.active > ul > li.active > ul {
           display: block;
         }
+        // Mobile menu back a level link
+        .mobile-menu-level-up {
+          color: $ncaWhite;
+          font-size: 16px;
+        }
       }
     }
   }
+}
+
+// Mobile navigation menu
+nav#navigation-mobile {
+
 }

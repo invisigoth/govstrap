@@ -6,18 +6,18 @@ core        = 7.x
 ;; Regions
 ;;;;;;;;;;;;;;;;;;;;;
 
-regions[header_menu]    = Header Menu
-regions[header]         = Header
-regions[navigation]     = Navigation bar
-regions[highlighted]    = Highlighted
-regions[help]           = Help
-regions[content]        = Content
-regions[sidebar_first]  = Sidebar left
-regions[sidebar_second] = Sidebar right
-regions[footer]         = Footer
-regions[footer_menu]    = Footer Menu
-regions[page_top]       = Page top
-regions[page_bottom]    = Page bottom
+regions[header_menu]        = Header Menu
+regions[header]             = Header
+regions[navigation]         = Navigation bar
+regions[highlighted]        = Highlighted
+regions[help]               = Help
+regions[content]            = Content
+regions[sidebar_first]      = Sidebar left
+regions[sidebar_second]     = Sidebar right
+regions[footer]             = Footer
+regions[footer_menu]        = Footer Menu
+regions[page_top]           = Page top
+regions[page_bottom]        = Page bottom
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Settings
@@ -41,6 +41,7 @@ settings[govstrap_rebuild_registry] = 0
 ;;;;;;;;;;;;;;;;;;;;;
 
 scripts[] = js/bootstrap.min.js
+scripts[] = js/jquery-ui.min.js
 scripts[] = js/scripts.js
 
 ;;;;;;;;;;;;;;;;;;;;;

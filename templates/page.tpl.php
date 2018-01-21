@@ -10,13 +10,21 @@
         <?php print render($page['navigation']); ?>
     </div>
 </nav>
-<div id="mobile-overlay"></div>
 <!-- /#navigation -->
 
 <main>
   <div id="main" class="main-container <?php print $container_class; ?>">
     <?php if (!empty($page['highlighted'])): ?>
-      <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
+      <div class="highlighted"><?php print render($page['highlighted']); ?></div>
+    <div id="parking-info">
+        <div class="row">
+            <div class="col-sm-4"><strong>Parking in the parlimentary zone</strong></div>
+            <div class="col-sm-8 text-right">
+                <i class="icon-parking"></i>Information on paid parking
+                <i class="icon-money"></i>Pay a parking infringement notice
+            </div>
+        </div>
+    </div>
     <?php endif; ?>
     <?php print $messages; ?>
     <div id="content" class="row">

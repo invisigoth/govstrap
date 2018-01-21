@@ -8,21 +8,21 @@
     <nav class="navbar">
         <div class="container">
             <div class="navbar-header row">
-                <div class="col-lg-6">
+                <div class="col-sm-4 col-xs-8">
                     <a id="crest" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home">
                         <img src="/<?php print path_to_theme();?>/img/nca-logo.svg" />
                     </a>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-sm-8 col-xs-4">
 
                         <div class="row">
-                            <div id="topbar-search" role="search" class="col-lg-6">
+                            <div id="topbar-search" role="search" class="col-sm-6 hidden-xs">
                               <?php print $search_box; ?>
                             </div>
-                            <div id="topbar-contact" class="col-lg-3">
-                                <a href="/contact-us"><i class="icon-phone"></i> Contact us</a>
+                            <div id="topbar-contact" class="col-sm-3 col-xs-6">
+                                <a href="/contact-us"><i class="icon-phone"></i> Contact</a>
                             </div>
-                            <div id="topbar-menu" class="col-lg-3">
+                            <div id="topbar-menu" class="col-sm-3 col-xs-6">
                                 <a id="nav-toggle" role="button" href="#">
                                     <i class="icon-menu"></i>
                                     <span class="sr-only">Toggle </span>
