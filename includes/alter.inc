@@ -78,6 +78,6 @@ function govstrap_form_alter(&$form, &$form_state, $form_id) {
     $form['search_block_form']['#attributes']['placeholder'] = t('Search');
     $form['search_block_form']['#attributes']['autocomplete'] = 'off';
     // Update submit button style.
-    $form['actions']['submit']['#value'] = decode_entities('') . ' Search';
+    $form['actions']['submit']['#value'] = decode_entities('') . ' Search';
   }
 }

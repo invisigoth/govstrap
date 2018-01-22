@@ -118,15 +118,17 @@ html {
             form#search-block-form {
               .form-item {
                 input.form-text {
+                  font-family: "Roboto Condensed", Arial, sans-serif;
+                  font-weight: 300;
+                  font-size: 20px;
                   background: $ncaBlack;
                   padding: 0 10px;
                   width: 212px;
                   border-right: none;
                   border-radius: $borderRadius 0 0 $borderRadius;
-                  font-weight: normal !important;
                   border-right: 0 !important;
                   &:focus {
-                    background: #fff !important;
+                    background: $ncaWhite !important;
                     color: $darkGrey !important;
                   }
                   @media screen and (min-width: $screen-md-min) {
@@ -144,7 +146,7 @@ html {
                 width: 42px;
                 border-radius: 0 $borderRadius $borderRadius 0;
                 padding-left: 0;
-                text-indent: 11px;
+                text-indent: 8px;
                 letter-spacing: 2em;
                 font-size: 20px;
                 color: $lightGrey;
