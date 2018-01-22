@@ -1,8 +1,6 @@
 @charset "utf-8";
 
 // --- govStrap styles -----------------------------
-// Custom icon set
-@import 'govstrap/icons';
 // Variables
 @import 'govstrap/vars';
 // Mixins
@@ -12,7 +10,7 @@
 // Fonts, text size etc.
 @import 'govstrap/typography';
 // Custom icons
-@import 'govstrap/icons';
+@import 'site-icons';
 // All elements, such as btns, wells, etc
 @import 'govstrap/elements';
 // base responsive styles for govStrap styles
