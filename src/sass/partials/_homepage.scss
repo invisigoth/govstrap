@@ -9,26 +9,62 @@ html {
       border-top: 1px solid $ncaWhite;
       color: $ncaWhite;
       padding: 0 10%;
-      height: 60px;
+      min-height: 60px;
       line-height: 60px;
+      a {
+        color: $ncaWhite;
+      }
       strong {
         font-weight: 300;
         font-size: 22px;
+      }
+      .link {
+        padding: 0 5px;
+      }
+      @media screen and (max-width: $screen-xs-max) {
+        text-align: center;
+        line-height: 30px;
+        padding: 0;
+        strong {
+          display: block;
+          padding: 15px 0;
+          font-size: 24px;
+        }
+        .link {
+          display: block;
+          i {
+            display: block;
+            font-size: 22px;
+          }
+          white-space: nowrap;
+          text-align: center;
+          border-bottom: 1px solid $darkGrey;
+          padding: 10px 0;
+          &:first-of-type {
+            border-top: 1px solid $darkGrey;
+          }
+        }
       }
     }
     // Carousel
     #homepage-carousel {
       .carousel-inner {
         h3 {
+          position: absolute;
+          top: 50%;
+          color: $ncaWhite;
+          text-shadow: 2px 2px 4px $ncaBlack;
+          font-size: 32px;
+          margin-top: -32px;
+          font-weight: 300;
+          padding-left: 10%;
+          max-width: 80%;
           @media screen and (min-width: $screen-sm-min) {
             font-size: 42px;
-            position: absolute;
-            top: 50%;
             margin-top: -42px;
             color: $ncaWhite;
             text-shadow: 2px 2px 4px $ncaBlack;
             padding-left: 10%;
-            font-weight: 300;
             max-width: 66%;
           }
         }
@@ -53,7 +89,7 @@ html {
           }
         }
       }
-      .carousel-controls {
+      .carousel-indicator-wrapper {
         position: absolute;
         bottom: 10px;
         width: 100%;
@@ -70,9 +106,17 @@ html {
             float: right;
           }
         }
+        @media screen and (max-width: $screen-xs-max) {
+          display: none;
+        }
       }
       .carousel-control {
         width: 5%;
+        @media screen and (max-width: $screen-xs-max) {
+          width: 0%;
+          margin-left: -9999px;
+          margin-right: 9999px;
+        }
       }
       .carousel-control .icon-rarrow {
         left: 50%;

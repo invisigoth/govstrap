@@ -17,9 +17,15 @@ html {
         border-radius: 0;
         margin-bottom: 0;
         .container {
+          @media screen and (max-width: $screen-xs-max) {
+            padding: 0;
+          }
           .navbar-header {
             position: relative;
             width: 100%;
+            @media screen and (max-width: $screen-xs-max) {
+              margin: 0;
+            }
             #crest {
               display: block;
               overflow: hidden;
@@ -50,28 +56,58 @@ html {
                 text-decoration: none;
               }
             }
+            @media screen and (max-width: $screen-xs-max) {
+              margin-left: 0;
+              margin-right: 0;
+            }
           }
           #topbar-menu {
-            background: $ncaBlue;
-            &:hover {
-              background: darken($ncaBlue, 5%);
+            @media screen and (min-width: $screen-sm-min) {
+              background: $ncaBlue;
+              &:hover {
+                background: darken($ncaBlue, 5%);
+              }
+              #nav-toggle-burger {
+                display: none;
+              }
             }
-            #nav-toggle-burger {
-              margin-top: 29px;
-              display: inline-block;
-              i {
-                display: block;
-                width: 24px;
-                height: 3px;
-                background: $ncaWhite;
-                margin-top: 3px;
+            @media screen and (max-width: $screen-xs-max) {
+              a {
+                i {
+                  font-size: 26px;
+                  color: $ncaBlue;
+                }
+                font-size: 14px;
+                text-transform: uppercase;
+                line-height: 22px;
+                padding-top: 20px;
+                top: 0;
+                right: 0;
+                position: absolute;
               }
             }
           }
           #topbar-contact {
-            background: $ncaGreen;
-            &:hover {
-              background: darken($ncaGreen, 5%);
+            @media screen and (min-width: $screen-sm-min) {
+              background: $ncaGreen;
+              &:hover {
+                background: darken($ncaGreen, 5%);
+              }
+            }
+            @media screen and (max-width: $screen-xs-max) {
+              a {
+                i {
+                  font-size: 26px;
+                  color: $ncaGreen;
+                }
+                font-size: 14px;
+                text-transform: uppercase;
+                line-height: 22px;
+                padding-top: 20px;
+                top: 0;
+                left: 0;
+                position: absolute;
+              }
             }
           }
           #topbar-search {

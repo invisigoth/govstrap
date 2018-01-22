@@ -20,8 +20,8 @@
         <div class="row">
             <div class="col-sm-4"><strong>Parking in the parlimentary zone</strong></div>
             <div class="col-sm-8 text-right">
-                <i class="icon-parking"></i>Information on paid parking
-                <i class="icon-money"></i>Pay a parking infringement notice
+                <span class="link"><a href="/parking/parking-areas"><i class="icon-parking"></i>Information about paid parking</a></span>
+                <span class="link"><a href="/parking/infringement-payment"><i class="icon-money"></i>Pay a parking infringement notice</a></span>
             </div>
         </div>
     </div>

@@ -22,8 +22,7 @@
         <?php endforeach; ?>
 
         <!-- Slide indicators -->
-        <div class="carousel-controls">
-
+        <div class="carousel-indicator-wrapper">
             <ol class="carousel-indicators">
                 <?php foreach ($rows as $id => $row): ?>
                     <?php if ($id == 0): ?>

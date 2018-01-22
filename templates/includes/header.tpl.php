@@ -26,7 +26,7 @@
                                 <a id="nav-toggle" role="button" href="#">
                                     <i class="icon-menu"></i>
                                     <span class="sr-only">Toggle </span>
-                                    <span>Menu</span>
+                                    Menu
                                 </a>
                             </div>
                         </div>
