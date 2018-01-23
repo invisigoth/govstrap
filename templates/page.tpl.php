@@ -63,8 +63,11 @@
   </div>
 </main>
 
-<?php if (!empty($page['footer'])): ?>
-  <footer id="footer" class="footer <?php print $container_class; ?>">
-    <?php print render($page['footer']); ?>
-  </footer>
-<?php endif; ?>
+<footer id="footer" class="footer <?php print $container_class; ?>">
+    <?php if (!empty($page['footer_menu'])): ?>
+      <?php print render($page['footer_menu']); ?>
+    <?php endif; ?>
+    <?php if (!empty($page['footer'])): ?>
+        <?php print render($page['footer']); ?>
+    <?php endif; ?>
+</footer>

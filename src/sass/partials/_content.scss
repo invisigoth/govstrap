@@ -1,10 +1,10 @@
 html {
   body {
+    background: $lightGrey;
     main {
       .highlighted {
         padding: 0;
       }
-      background: $lightGrey;
       #page-content {
         background: $ncaWhite;
         padding: 15px;

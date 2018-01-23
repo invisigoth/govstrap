@@ -14,8 +14,8 @@ regions[help]               = Help
 regions[content]            = Content
 regions[sidebar_first]      = Sidebar left
 regions[sidebar_second]     = Sidebar right
-regions[footer]             = Footer
 regions[footer_menu]        = Footer Menu
+regions[footer]             = Footer
 regions[page_top]           = Page top
 regions[page_bottom]        = Page bottom
 

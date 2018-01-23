@@ -1,0 +1,89 @@
+html {
+  body {
+    footer {
+      .region-footer-menu {
+        background: lighten($ncaBlack, 10%);
+        float: left;
+        #block-menu-menu-footer-sub-menu .content {
+          & > ul.menu {
+            padding: 0;
+            margin: 0;
+            & > li {
+              list-style: none;
+              margin: 0;
+              padding: 20px 30px;
+              & > a {
+                font-family: "Roboto Condensed", Arial, sans-serif;
+                font-weight: 400;
+                font-size: 18px;
+                color: lighten($ncaBlue, 20%);
+              }
+              & > ul.menu {
+                padding: 0;
+                & > li {
+                  list-style: none;
+                  margin: 0;
+                }
+                a {
+                  color: $ncaWhite;
+                  font-size: 14px;
+                }
+              }
+              @media (min-width: $screen-sm-min) {
+                width: 33.3333%;
+                float: left;
+                &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+                  background: $ncaBlack;
+                }
+                &:nth-child(4), &:nth-child(5), &:nth-child(6) {
+                  background: lighten($ncaBlack, 10%);
+                }
+              }
+            }
+          }
+        }
+      }
+      .region-footer {
+        width: 100%;
+        background: $lightGrey;
+        float: left;
+        padding: 1em;
+        #block-menu-menu-quick-links {
+          ul {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            font-size: 16px;
+            line-height: 16px;
+            @media screen and (min-width: $screen-sm-min) {
+              text-align: center;
+            }
+            li {
+              list-style: none;
+              margin: 0;
+              @media screen and (min-width: $screen-sm-min) {
+                display: inline-block;
+                &:not(.last) {
+                  border-right: 2px solid $ncaBlack;
+                }
+              }
+              @media screen and (max-width: $screen-xs-max) {
+                padding-bottom: 5px;
+                &:before {
+                  font-family: "govstrap-icons";
+                  content: "\f005";
+                  color: $darkGrey;
+                }
+              }
+              a {
+                font-weight: bold;
+                color: $ncaBlack;
+                padding: 0 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
