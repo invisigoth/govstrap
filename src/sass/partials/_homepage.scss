@@ -46,6 +46,26 @@ html {
         }
       }
     }
+    // Homepage panels
+    .homepage-panel-row-3-col {
+      @media screen and (min-width: $screen-sm-min) {
+        padding: 30px calc(10% - 30px);
+      }
+      .panel-col-header {
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .panel-col-content {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      h2 {
+        font-weight: 400;
+        font-size: 26px;
+      }
+    }
     // Carousel
     #homepage-carousel {
       .carousel-inner {
