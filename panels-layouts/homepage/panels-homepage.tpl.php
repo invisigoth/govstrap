@@ -27,25 +27,16 @@
 } ?>>
     <div class="row homepage-panel-row-3-col">
         <div class="col-xs-12 col-sm-4">
-            <div class="panel-col-header">
-                <img src="/<?php print path_to_theme();?>/img/background-venues.jpg" alt="lanterns at enlighten festival"/>
-            </div>
             <div class="panel-col-content">
               <?php print $content['row-1-col-1']; ?>
             </div>
         </div>
         <div class="col-xs-12 col-sm-4">
-            <div class="panel-col-header">
-                <img src="/<?php print path_to_theme();?>/img/background-education.jpg" alt="school children near lake burley griffin"/>
-            </div>
             <div class="panel-col-content">
               <?php print $content['row-1-col-2']; ?>
             </div>
         </div>
         <div class="col-xs-12 col-sm-4">
-            <div class="panel-col-header">
-                <img src="/<?php print path_to_theme();?>/img/background-events.jpg" alt="a concert at the commonwealth park"/>
-            </div>
             <div class="panel-col-content">
               <?php print $content['row-1-col-3']; ?>
             </div>

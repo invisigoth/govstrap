@@ -5,16 +5,17 @@ html {
       font-family: "Roboto Condensed", Arial, sans-serif;
       font-weight: 300;
       font-size: 20px;
-      background: darken($ncaBlue, 20%);
+      // background: darken($ncaBlue, 20%);
       border-top: 1px solid $ncaWhite;
       color: $ncaWhite;
       padding: 0 10%;
       min-height: 60px;
       line-height: 60px;
       a {
-        color: $ncaWhite;
+        color: $ncaOrange;
       }
       strong {
+        color: $ncaBlack;
         font-weight: 300;
         font-size: 22px;
       }
@@ -60,10 +61,69 @@ html {
       .panel-col-content {
         padding-left: 15px;
         padding-right: 15px;
+        .bean-image-and-text .field-name-field-bean-image {
+          margin-left: -15px;
+          margin-right: -15px;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
       }
       h2 {
         font-weight: 400;
         font-size: 26px;
+      }
+    }
+    .more-link {
+      text-align: left;
+      margin-top: 1em;
+      a:after {
+        font-family: govstrap-icons;
+        content: "\ea3c";
+      }
+    }
+    .nca-cta {
+      margin-left: -15px;
+      margin-right: -15px;
+      margin-top: 2em;
+      a {
+        display: block;
+        background: $ncaOrange;
+        padding: 1em 4em 1em 1em;
+        color: $ncaWhite;
+        position: relative;
+        &:after {
+          font-family: govstrap-icons;
+          content: "\e902";
+          display: inline-block;
+          right: 0.5em;
+          position: absolute;
+          top: 50%;
+          margin-top: -15px;
+          font-size: 22px;
+        }
+        &:hover {
+          text-decoration: none;
+          background: darken($ncaOrange, 5%);
+        }
+        &:before {
+          margin-top: -10px;
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 46%;
+          width: 0;
+          height: 0;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          border-bottom: 10px solid $ncaOrange;
+          clear: both;
+          &:hover {
+            text-decoration: none;
+            background: darken($ncaOrange, 5%);
+          }
+        }
       }
     }
     // Carousel
@@ -131,6 +191,8 @@ html {
         }
       }
       .carousel-control {
+        background: none;
+        cursor: pointer;
         width: 5%;
         @media screen and (max-width: $screen-xs-max) {
           width: 0%;
