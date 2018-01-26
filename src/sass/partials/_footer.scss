@@ -3,11 +3,12 @@ html {
     footer {
       .region-footer-menu {
         background: lighten($ncaBlack, 10%);
-        float: left;
         #block-menu-menu-footer-sub-menu .content {
           & > ul.menu {
             padding: 0;
             margin: 0;
+            display: flex;
+            flex-wrap: wrap;
             & > li {
               list-style: none;
               margin: 0;
@@ -15,7 +16,7 @@ html {
               & > a {
                 font-family: "Roboto Condensed", Arial, sans-serif;
                 font-weight: 400;
-                font-size: 18px;
+                font-size: 20px;
                 color: lighten($ncaBlue, 20%);
               }
               & > ul.menu {
@@ -26,12 +27,10 @@ html {
                 }
                 a {
                   color: $ncaWhite;
-                  font-size: 14px;
                 }
               }
               @media (min-width: $screen-sm-min) {
                 width: 33.3333%;
-                float: left;
                 &:nth-child(1), &:nth-child(2), &:nth-child(3) {
                   background: $ncaBlack;
                 }
@@ -47,7 +46,7 @@ html {
         width: 100%;
         background: $lightGrey;
         float: left;
-        padding: 1em;
+        padding: 30px 15px;
         #block-menu-menu-quick-links {
           ul {
             padding: 0;
@@ -63,6 +62,9 @@ html {
               margin: 0;
               @media screen and (min-width: $screen-sm-min) {
                 display: inline-block;
+                &.leaf {
+                  padding-top: 0;
+                }
                 &:not(.last) {
                   border-right: 2px solid $ncaBlack;
                 }
@@ -72,7 +74,7 @@ html {
                 &:before {
                   font-family: "govstrap-icons";
                   content: "\f005";
-                  color: $darkGrey;
+                  color: $mediumGrey;
                 }
               }
               a {

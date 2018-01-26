@@ -34,7 +34,7 @@
         </aside>  <!-- /#sidebar-first -->
       <?php endif; ?>
       <section id="main-content-section" class="<?php print $content_column_class; ?>" role="main">
-        <a id="main-content"></a>
+        <div id="main-content"></div>
         <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
         <?php print render($title_prefix); ?>
         <?php if (!empty($title)): ?>
@@ -63,11 +63,4 @@
   </div>
 </main>
 
-<footer id="footer" class="footer <?php print $container_class; ?>">
-    <?php if (!empty($page['footer_menu'])): ?>
-      <?php print render($page['footer_menu']); ?>
-    <?php endif; ?>
-    <?php if (!empty($page['footer'])): ?>
-        <?php print render($page['footer']); ?>
-    <?php endif; ?>
-</footer>
+<?php include 'includes/footer.tpl.php'; ?>

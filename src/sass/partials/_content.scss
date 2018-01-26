@@ -1,6 +1,26 @@
 html {
   body {
     background: $lightGrey;
+    // Generic font size
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    // Headings
+    h1, h2, h3 {
+      font-family: "Roboto Condensed", sans-serif;
+      font-weight: 400;
+    }
+    // Links
+    a {
+      color: darken($ncaBlue, 5%);
+    }
+    a:not([href*='nca.gov.au']):not([href*='.local']):not([href^='#']):not([href^='/']):after {
+      font-family: "govstrap-icons";
+      content: "\f001";
+      margin-left: 5px;
+      font-size: 12px;
+    }
     main {
       .highlighted {
         padding: 0;

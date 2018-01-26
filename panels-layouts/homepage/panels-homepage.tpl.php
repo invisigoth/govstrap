@@ -48,6 +48,7 @@
         </div>
     </div>
     <div class="row">
+        <div class="row-header"><h2>News and updates</h2></div>
         <div class="col-xs-12 col-sm-6">
           <?php print $content['row-3-col-1']; ?>
         </div>

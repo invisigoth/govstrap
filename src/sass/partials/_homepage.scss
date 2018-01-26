@@ -39,18 +39,174 @@ html {
           }
           white-space: nowrap;
           text-align: center;
-          border-bottom: 1px solid $darkGrey;
+          border-bottom: 1px solid $mediumGrey;
           padding: 10px 0;
           &:first-of-type {
-            border-top: 1px solid $darkGrey;
+            border-top: 1px solid $mediumGrey;
           }
         }
       }
     }
-    // Homepage panels
+    .panel-nca-front {
+      .row {
+        margin-bottom: 15px;
+      }
+    }
+    // Homepage panel: Tweeter link
+    .twitter-link {
+      padding-left: 10px;
+      a {
+        color: $ncaOrange;
+      }
+    }
+    // Homepage panel: news and updates
+    .row-header {
+      text-align: center;
+    }
+    .pane-media-releases {
+      margin-bottom: 30px;
+      .node-media-release {
+        margin-bottom: 1em;
+        .group-left {
+          width: 10%;
+          .field-type-datetime {
+            padding: 9px;
+            border: 2px solid $ncaBlue;
+            border-radius: 28px;
+            text-align: center;
+            color: $ncaWhite;
+            background: $ncaBlue;
+            line-height: 16px;
+          }
+        }
+        .group-right {
+          width: 90%;
+          .field-name-title {
+            padding-left: 15px;
+            padding-top: 7px;
+            .field-item {
+              padding-bottom: 10px;
+              border-bottom: 1px solid $lightGrey;
+              p {
+                margin: 0;
+              }
+            }
+          }
+        }
+        @media screen and (max-width: $screen-xs-max) {
+          .group-left {
+            width: 15%;
+          }
+          .group-right {
+            width: 85%;
+          }
+        }
+      }
+    }
+    // Homepage panel: wide image
+    .wide-image {
+      .pane-title {
+        margin-left: -15px;
+        margin-right: -15px;
+        font-size: 32px;
+        position: absolute;
+        @media screen and (min-width: $screen-sm-min) {
+          top: calc(50% - 33px);
+          margin-top: -42px;
+          max-width: 66%;
+          font-size: 42px;
+        }
+        color: $ncaWhite;
+        text-shadow: 2px 2px 4px $ncaBlack;
+        padding-left: 10%;
+      }
+      .bean-image-and-text {
+        @media screen and (min-width: $screen-sm-min) {
+          .field-name-field-bean-text {
+            padding: 0 calc(10% - 30px);
+          }
+          .field-type-image {
+            margin-left: -15px;
+            margin-right: -15px;
+          }
+        }
+        .field-type-image {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+      // Tri-colour link cluster
+      .field-name-field-bean-text {
+        .tri-colour-links {
+          list-style: none;
+          padding: 0;
+          @media screen and (min-width: $screen-sm-min) {
+            margin-top: -37px;
+          }
+          li {
+            display: inline-block;
+            position: relative;
+            @media screen and (min-width: $screen-sm-min) {
+              width: 33.3333%;
+            }
+            @media screen and (max-width: $screen-xs-max) {
+              width: 100%;
+            }
+            position: relative;
+            height: 74px;
+            &.nca-blue {
+              background: $ncaBlue;
+              &:hover {
+                text-decoration: none;
+                background: darken($ncaBlue, 5%);
+              }
+            }
+            &.nca-green {
+              background: $ncaGreen;
+              &:hover {
+                text-decoration: none;
+                background: darken($ncaGreen, 5%);
+              }
+            }
+            &.nca-orange {
+              background: $ncaOrange;
+              &:hover {
+                text-decoration: none;
+                background: darken($ncaOrange, 5%);
+              }
+            }
+            a {
+              color: $ncaWhite;
+              display: block;
+              line-height: 72px;
+              text-align: center;
+              @media screen and (max-width: $screen-xs-max) {
+                text-align: left;
+                padding-left: 15px;
+              }
+              &:hover {
+                text-decoration: none;
+              }
+              [class^="icon-"]:before, [class*=" icon-"] {
+                font-size: 22px;
+                margin-left: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    // Homepage panel: three columns
     .homepage-panel-row-3-col {
       @media screen and (min-width: $screen-sm-min) {
         padding: 30px calc(10% - 30px);
+      }
+      @media screen and (max-width: $screen-xs-max) {
+        .col-xs-12 {
+          margin-bottom: 15px;
+        }
       }
       .panel-col-header {
         img {
@@ -78,9 +234,12 @@ html {
     .more-link {
       text-align: left;
       margin-top: 1em;
-      a:after {
-        font-family: govstrap-icons;
-        content: "\ea3c";
+      a {
+        color: $ncaOrange;
+        &:after {
+          font-family: govstrap-icons;
+          content: "\ea3c";
+        }
       }
     }
     .nca-cta {
@@ -90,7 +249,7 @@ html {
       a {
         display: block;
         background: $ncaOrange;
-        padding: 1em 4em 1em 1em;
+        padding: 1em 32px 1em 1em;
         color: $ncaWhite;
         position: relative;
         &:after {
@@ -100,7 +259,7 @@ html {
           right: 0.5em;
           position: absolute;
           top: 50%;
-          margin-top: -15px;
+          margin-top: -10px;
           font-size: 22px;
         }
         &:hover {
