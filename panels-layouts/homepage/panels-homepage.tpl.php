@@ -47,7 +47,7 @@
           <?php print $content['row-2']; ?>
         </div>
     </div>
-    <div class="row">
+    <div class="row homepage-panel-row-2-col">
         <div class="row-header"><h2>News and updates</h2></div>
         <div class="col-xs-12 col-sm-6">
           <?php print $content['row-3-col-1']; ?>
@@ -56,12 +56,12 @@
           <?php print $content['row-3-col-2']; ?>
         </div>
     </div>
-    <div class="row wide-image">
+    <div class="row wide-image top15">
         <div class="col-xs-12 col-sm-12">
           <?php print $content['row-4']; ?>
         </div>
     </div>
-    <div class="row">
+    <div class="row homepage-panel-row-3-col">
         <div class="col-xs-12 col-sm-4">
           <?php print $content['row-5-col-1']; ?>
         </div>

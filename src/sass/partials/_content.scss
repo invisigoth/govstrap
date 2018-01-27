@@ -21,6 +21,21 @@ html {
       margin-left: 5px;
       font-size: 12px;
     }
+    .item-list {
+      ul {
+        list-style: none;
+        li {
+          margin: 0;
+          &:before {
+            font-family: "govstrap-icons";
+            content: "\f005";
+            color: $mediumGrey;
+            position: absolute;
+            left: 0px;
+          }
+        }
+      }
+    }
     main {
       .highlighted {
         padding: 0;
