@@ -65,7 +65,6 @@ html {
     // Homepage panel: news and updates
     .homepage-panel-row-2-col {
       padding: 30px calc(10% - 30px);
-      margin-top: -37px;
     }
     .row-header {
       text-align: center;
@@ -152,6 +151,7 @@ html {
           padding: 0;
           @media screen and (min-width: $screen-sm-min) {
             margin-top: -37px;
+            margin-bottom: -22px;
           }
           li {
             display: inline-block;
