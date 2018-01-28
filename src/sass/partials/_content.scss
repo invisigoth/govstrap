@@ -11,6 +11,9 @@ html {
       font-family: "Roboto Condensed", sans-serif;
       font-weight: 400;
     }
+    h1 {
+      font-size: 48px;
+    }
     // Links
     a {
       color: darken($ncaBlue, 5%);
@@ -21,6 +24,12 @@ html {
       margin-left: 5px;
       font-size: 12px;
     }
+    // Iframes
+    iframe {
+      max-width: 100%;
+      overflow: hidden;
+    }
+    // Item list
     .item-list {
       ul {
         list-style: none;
@@ -36,13 +45,59 @@ html {
         }
       }
     }
+    .page-header {
+      border-bottom: none;
+    }
     main {
       .highlighted {
-        padding: 0;
-      }
-      #page-content {
         background: $ncaWhite;
-        padding: 15px;
+        padding: 0;
+        margin-bottom: -60px;
+        .section_banner {
+          overflow: hidden;
+        }
+        // We want to display the title (H1) at the middle of the banner image
+        h1 {
+          position: absolute;
+          top: 180px;
+          padding-left: 99px;
+          color: $ncaWhite;
+          text-shadow: 2px 2px 4px $ncaBlack;
+          max-width: 752px;
+        }
+        // We want to display the breadcrumbs at the bottom of the section banner image
+        .block-crumbs {
+          position: relative;
+          bottom: 60px;
+          width: 100%;
+          .breadcrumb {
+            font-family: "Roboto Condensed", Arial, sans-serif;
+            font-weight: 300;
+            background: rgba( $ncaBlack, .8 );
+            margin: 0;
+            padding: 1em calc(10% - 15px);
+            font-size: 1.25em;
+            border-radius: 0;
+            a {
+              color: lighten($ncaGreen, 20%);
+              text-decoration: none;
+            }
+          }
+        }
+        @media screen and (max-width: $screen-xs-max) {
+          h1 {
+            padding-left: 15px;
+            font-size: 36px;
+          }
+          .breadcrumb {
+            padding: 1em 15px !important;
+          }
+        }
+      }
+      #content {
+        background: $ncaWhite;
+        margin: 0;
+        padding: 30px calc(10% - 30px);
       }
     }
   }

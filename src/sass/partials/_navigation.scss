@@ -162,7 +162,83 @@ nav#navigation {
   }
 }
 
-// Mobile navigation menu
-nav#navigation-mobile {
-
+// Sidebar menu
+.region-sidebar-second {
+  @media (max-width: $screen-xs-max) {
+    margin-top: 30px;
+  }
+  .block-menu-block {
+    ul.menu {
+      list-style: none;
+      padding-left: 0;
+      li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        a {
+          color: $ncaWhite;
+          border-bottom: 1px solid $ncaWhite;
+          font-size: 1.2em;
+          display: block;
+          font-family: "Roboto Condensed", Arial, sans-serif;
+          &.active, &.active-trail {
+            color: $ncaOrange;
+            background: lighten($ncaBlue, 50%);
+          }
+          &:hover, &:active {
+            text-decoration: none;
+            background: lighten($ncaBlue, 30%);
+            color: $ncaBlack;
+          }
+        }
+      }
+    }
+  }
+  // 1st level menu item, we only want to display the one in the active trail
+  #block-menu-block-3 {
+    .menu-block-wrapper > ul.menu {
+      margin-bottom: 0;
+      & > li:not(.active-trail) {
+        display: none;
+      }
+      & > li {
+        a {
+          color: lighten($ncaGreen, 20%);
+          background: darken($ncaBlue, 20%);
+          display: block;
+          padding: 15px;
+          &:before {
+            content: "\ea40";
+            font-family: "govstrap-icons";
+            padding-right: 5px;
+          }
+          &:hover {
+            background: darken($ncaBlue, 25%);
+          }
+        }
+      }
+    }
+  }
+  #block-menu-block-1 {
+    .menu-block-wrapper > ul.menu > li {
+      background: $ncaBlue;
+      & > a {
+        padding: 15px;
+        text-transform: uppercase;
+      }
+    }
+    .menu-block-wrapper > ul > li.active-trail > ul {
+      background: lighten($ncaBlue, 50%);
+      & > li {
+        & > a {
+          padding: 15px;
+          padding-left: 30px;
+          color: $ncaBlack;
+        }
+      }
+    }
+    .menu-block-wrapper > ul > li:not(.active-trail) > ul {
+      display: none;
+    }
+  }
 }
