@@ -29,12 +29,24 @@ html {
                   color: $ncaWhite;
                 }
               }
-              @media (min-width: $screen-sm-min) {
+              @media (min-width: $screen-md-min) {
                 width: 33.3333%;
                 &:nth-child(1), &:nth-child(2), &:nth-child(3) {
                   background: $ncaBlack;
                 }
                 &:nth-child(4), &:nth-child(5), &:nth-child(6) {
+                  background: lighten($ncaBlack, 10%);
+                }
+              }
+              @media (min-width: $screen-sm-min) {
+                width: 50%;
+                &:nth-child(1), &:nth-child(2) {
+                  background: $ncaBlack;
+                }
+                &:nth-child(3), &:nth-child(4) {
+                  background: lighten($ncaBlack, 5%);
+                }
+                &:nth-child(5), &:nth-child(6) {
                   background: lighten($ncaBlack, 10%);
                 }
               }
@@ -54,13 +66,13 @@ html {
             width: 100%;
             font-size: 16px;
             line-height: 16px;
-            @media screen and (min-width: $screen-sm-min) {
+            @media screen and (min-width: $screen-md-min) {
               text-align: center;
             }
             li {
               list-style: none;
               margin: 0;
-              @media screen and (min-width: $screen-sm-min) {
+              @media screen and (min-width: $screen-md-min) {
                 display: inline-block;
                 &.leaf {
                   padding-top: 0;
@@ -69,7 +81,7 @@ html {
                   border-right: 2px solid $ncaBlack;
                 }
               }
-              @media screen and (max-width: $screen-xs-max) {
+              @media screen and (max-width: $screen-sm-max) {
                 padding-bottom: 5px;
                 &:before {
                   font-family: "govstrap-icons";

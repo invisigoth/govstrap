@@ -9,6 +9,7 @@ html {
     }
     // Parking info
     #parking-info {
+      margin: 0;
       font-family: "Roboto Condensed", Arial, sans-serif;
       font-weight: 300;
       font-size: 20px;
@@ -28,7 +29,7 @@ html {
       .link {
         padding: 0 5px;
       }
-      @media screen and (max-width: $screen-xs-max) {
+      @media screen and (max-width: $screen-sm-max) {
         text-align: center;
         line-height: 30px;
         padding: 0;
@@ -45,15 +46,22 @@ html {
           }
           white-space: nowrap;
           text-align: center;
-          border-bottom: 1px solid $mediumGrey;
           padding: 10px 0;
           &:first-of-type {
             border-top: 1px solid $mediumGrey;
+            border-bottom: 1px solid $mediumGrey;
           }
         }
       }
+      .col-sm-12 {
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
     .panel-nca-front {
+      @media screen and (max-width: $screen-sm-max) {
+        padding-top: 15px;
+      }
       .row {
         margin-bottom: 15px;
       }
@@ -83,6 +91,9 @@ html {
           width: 12%;
           .field-type-datetime {
             padding: 9px;
+            @media screen and (max-width: $screen-sm-max) {
+              padding: 7px;
+            }
             border: 2px solid $ncaBlue;
             border-radius: 28px;
             text-align: center;
@@ -105,7 +116,7 @@ html {
             }
           }
         }
-        @media screen and (max-width: $screen-xs-max) {
+        @media screen and (max-width: $screen-sm-max) {
           .group-left {
             width: 15%;
           }
@@ -124,6 +135,9 @@ html {
         position: absolute;
         margin-top: 15px;
         @media screen and (min-width: $screen-sm-min) {
+          top: calc(50% - 140px);
+        }
+        @media screen and (min-width: $screen-md-min) {
           top: calc(50% - 33px);
           margin-top: -42px;
           max-width: 66%;
@@ -134,7 +148,7 @@ html {
         padding-left: 10%;
       }
       .bean-image-and-text {
-        @media screen and (min-width: $screen-sm-min) {
+        @media screen and (min-width: $screen-md-min) {
           .field-name-field-bean-text {
             padding: 0 calc(10% - 30px);
           }
@@ -155,17 +169,17 @@ html {
         .tri-colour-links {
           list-style: none;
           padding: 0;
-          @media screen and (min-width: $screen-sm-min) {
+          @media screen and (min-width: $screen-md-min) {
             margin-top: -37px;
             margin-bottom: -22px;
           }
           li {
             display: inline-block;
             position: relative;
-            @media screen and (min-width: $screen-sm-min) {
+            @media screen and (min-width: $screen-md-min) {
               width: 33.3333%;
             }
-            @media screen and (max-width: $screen-xs-max) {
+            @media screen and (max-width: $screen-sm-max) {
               width: 100%;
             }
             position: relative;
@@ -196,7 +210,7 @@ html {
               display: block;
               line-height: 72px;
               text-align: center;
-              @media screen and (max-width: $screen-xs-max) {
+              @media screen and (max-width: $screen-sm-max) {
                 text-align: left;
                 padding-left: 15px;
               }
@@ -214,10 +228,10 @@ html {
     }
     // Homepage panel: three columns
     .homepage-panel-row-3-col {
-      @media screen and (min-width: $screen-sm-min) {
+      @media screen and (min-width: $screen-md-min) {
         padding: 30px calc(10% - 30px);
       }
-      @media screen and (max-width: $screen-xs-max) {
+      @media screen and (max-width: $screen-sm-max) {
         .col-xs-12 {
           margin-bottom: 15px;
         }
@@ -248,6 +262,9 @@ html {
     .more-link {
       text-align: left;
       margin-top: 1em;
+      @media screen and (max-width: $screen-sm-max) {
+        margin-bottom: 15px;
+      }
       a {
         color: $ncaOrange;
         &:after {
@@ -259,7 +276,10 @@ html {
     .nca-cta {
       margin-left: -15px;
       margin-right: -15px;
-      margin-top: 20px;
+      margin-top: 15px;
+      @media screen and (max-width: $screen-sm-max) {
+        margin-bottom: 15px;
+      }
       a {
         display: block;
         background: $ncaOrange;
@@ -295,7 +315,7 @@ html {
           font-weight: 300;
           padding-left: 10%;
           max-width: 80%;
-          @media screen and (min-width: $screen-sm-min) {
+          @media screen and (min-width: $screen-md-min) {
             font-size: 42px;
             margin-top: -42px;
             color: $ncaWhite;
@@ -332,7 +352,7 @@ html {
         right: 10%;
         left: auto;
         .carousel-indicators {
-          @media screen and (min-width: $screen-sm-min) {
+          @media screen and (min-width: $screen-md-min) {
             position: relative;
             bottom: 0;
             text-align: right;
@@ -342,7 +362,7 @@ html {
             float: right;
           }
         }
-        @media screen and (max-width: $screen-xs-max) {
+        @media screen and (max-width: $screen-sm-max) {
           display: none;
         }
       }
@@ -350,7 +370,7 @@ html {
         background: none;
         cursor: pointer;
         width: 5%;
-        @media screen and (max-width: $screen-xs-max) {
+        @media screen and (max-width: $screen-sm-max) {
           width: 0%;
           margin-left: -9999px;
           margin-right: 9999px;

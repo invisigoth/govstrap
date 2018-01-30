@@ -3,13 +3,13 @@
  */
 nav#navigation {
   display: none; // Initial state: hidden
-  background: lighten($ncaBlack, 5%);
+  background: rgba($ncaBlack, .99);
   border-top: 1px solid $darkGrey;
   padding: 20px 0;
-  @media (max-width: $screen-xs-max) {
+  @media (max-width: $screen-sm-max) {
     padding: 0;
   }
-  @media (min-width: $screen-sm-min) {
+  @media (min-width: $screen-md-min) {
     padding: 50px 0;
   }
   position: absolute;
@@ -23,7 +23,7 @@ nav#navigation {
       position: relative;
       margin-bottom: -10000px;
       padding-bottom: 10000px;
-      @media (min-width: $screen-sm-min) {
+      @media (min-width: $screen-md-min) {
         width: 32%;
         display: table;
       }
@@ -37,7 +37,7 @@ nav#navigation {
           list-style: none !important;
           margin: 0;
           a {
-            @media (min-width: $screen-sm-min) {
+            @media (min-width: $screen-md-min) {
               display: block;
             }
             width: 100%;
@@ -59,7 +59,7 @@ nav#navigation {
               border-left: 1px solid $darkGrey;
               margin: -12px 0;
               padding: 12px 0px 12px 12px;
-              @media (min-width: $screen-sm-min) {
+              @media (min-width: $screen-md-min) {
                 display: none;
               }
             }
@@ -68,7 +68,7 @@ nav#navigation {
         // Top level
         & > li {
           padding: 12px 16px;
-          @media (min-width: $screen-sm-min) {
+          @media (min-width: $screen-md-min) {
             &.expanded > a:after {
               font-family: "govstrap-icons";
               content: '\ea3c';
@@ -84,7 +84,7 @@ nav#navigation {
         }
         // 2nd level
         & > li > ul {
-          @media (min-width: $screen-sm-min) {
+          @media (min-width: $screen-md-min) {
             border-left: 1px solid $darkGrey;
           }
           & > li {
@@ -93,7 +93,7 @@ nav#navigation {
               font-size: 1.2em;
               color: $mediumGrey;
             }
-            @media (min-width: $screen-sm-min) {
+            @media (min-width: $screen-md-min) {
               &.expanded > a:after {
                 font-family: "govstrap-icons";
                 content: '\ea3c';
@@ -105,7 +105,7 @@ nav#navigation {
         }
         // 3rd level
         & > li > ul > li > ul {
-          @media (min-width: $screen-sm-min) {
+          @media (min-width: $screen-md-min) {
             border-left: 1px solid $darkGrey;
           }
           & > li {
@@ -124,7 +124,7 @@ nav#navigation {
           position: absolute;
           left: 100%;
           top: 0;
-          @media (max-width: $screen-xs-max) {
+          @media (max-width: $screen-sm-max) {
             z-index: 11;
             background: lighten($ncaBlack, 5%);
             top: 0;
@@ -152,7 +152,7 @@ nav#navigation {
           border-bottom: 2px solid $mediumGrey;
         }
         // Navigation item border on mobile
-        @media (max-width: $screen-xs-max) {
+        @media (max-width: $screen-sm-max) {
           & li {
             border-bottom: 1px solid $darkGrey;
           }
@@ -164,7 +164,7 @@ nav#navigation {
 
 // Sidebar menu
 .region-sidebar-second {
-  @media (max-width: $screen-xs-max) {
+  @media (max-width: $screen-sm-max) {
     margin-top: 30px;
   }
   .block-menu-block {
