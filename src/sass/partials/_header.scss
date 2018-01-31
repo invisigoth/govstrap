@@ -30,13 +30,15 @@ html {
               overflow: hidden;
               height: $navbarTopHeight;
               line-height: $navbarTopHeight;
+              display: block;
+              margin-left: -15px;
               // Crest image size
               img {
                 width: 220px;
-                height: 53px;
+                height: 52px;
                 @media screen and (max-width: $screen-xs-max) {
                   width: 200px;
-                  height: 48px;
+                  height: 46px;
                 }
               }
             }

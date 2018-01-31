@@ -15,7 +15,7 @@ html {
       font-size: 20px;
       background: $lightGrey;
       color: $ncaWhite;
-      padding: 0 10%;
+      padding: 0 calc(10% - 15px);
       min-height: 60px;
       line-height: 60px;
       a {
@@ -133,19 +133,21 @@ html {
         margin-right: -15px;
         font-size: 32px;
         position: absolute;
-        margin-top: 15px;
+        @media screen and (max-width: $screen-xs-max) {
+          padding-left: calc(10% - 10px);
+        }
         @media screen and (min-width: $screen-sm-min) {
           top: calc(50% - 140px);
         }
         @media screen and (min-width: $screen-md-min) {
           top: calc(50% - 33px);
-          margin-top: -42px;
+          margin-top: -21px;
           max-width: 66%;
           font-size: 42px;
         }
         color: $ncaWhite;
         text-shadow: 2px 2px 4px $ncaBlack;
-        padding-left: 10%;
+        padding-left: calc(10% - 20px);
       }
       .bean-image-and-text {
         @media screen and (min-width: $screen-md-min) {
@@ -169,6 +171,7 @@ html {
         .tri-colour-links {
           list-style: none;
           padding: 0;
+          margin-top: 5px;
           @media screen and (min-width: $screen-md-min) {
             margin-top: -37px;
             margin-bottom: -22px;
@@ -176,14 +179,13 @@ html {
           li {
             display: inline-block;
             position: relative;
+            height: 74px;
             @media screen and (min-width: $screen-md-min) {
               width: 33.3333%;
             }
             @media screen and (max-width: $screen-sm-max) {
               width: 100%;
             }
-            position: relative;
-            height: 74px;
             &.nca-blue {
               background: $ncaBlue;
               &:hover {
@@ -208,8 +210,11 @@ html {
             a {
               color: $ncaWhite;
               display: block;
-              line-height: 72px;
+              position: absolute;
+              top: calc(50% - 16px);
               text-align: center;
+              width: 100%;
+              height: 100%;
               @media screen and (max-width: $screen-sm-max) {
                 text-align: left;
                 padding-left: 15px;
@@ -217,10 +222,12 @@ html {
               &:hover {
                 text-decoration: none;
               }
-              [class^="icon-"]:before, [class*=" icon-"] {
-                font-size: 22px;
-                margin-left: 0;
-              }
+            }
+            [class^="icon-"]:before, [class*=" icon-"] {
+              font-size: 22px;
+              margin-left: 0;
+              top: 2px;
+              position: relative;
             }
           }
         }
@@ -242,12 +249,12 @@ html {
           height: auto;
         }
       }
-      .panel-col-content {
-        padding-left: 15px;
-        padding-right: 15px;
+      .col-md-4 {
+        @media screen and (min-width: $screen-md-min) {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
         .bean-image-and-text .field-name-field-bean-image {
-          margin-left: -15px;
-          margin-right: -15px;
           img {
             width: 100%;
             height: auto;
@@ -312,15 +319,13 @@ html {
           text-shadow: 2px 2px 4px $ncaBlack;
           font-size: 32px;
           margin-top: -32px;
-          font-weight: 300;
-          padding-left: 10%;
+          padding-left: calc(10% - 15px);
           max-width: 80%;
           @media screen and (min-width: $screen-md-min) {
             font-size: 42px;
             margin-top: -42px;
             color: $ncaWhite;
             text-shadow: 2px 2px 4px $ncaBlack;
-            padding-left: 10%;
             max-width: 66%;
           }
         }
@@ -332,7 +337,7 @@ html {
           width: 100%;
           background: rgba( $ncaBlack, .8 );
           margin: 0;
-          padding: 1em 10%;
+          padding: 1em calc(10% - 15px);
           font-size: 1.25em;
           a {
             color: lighten($ncaGreen, 20%);
@@ -342,6 +347,12 @@ html {
               content: "\ea3c";
               padding-left: 0.5em;
             }
+          }
+        }
+        @media screen and (max-width: $screen-sm-min) {
+          img {
+            position: relative;
+            left: -33%;
           }
         }
       }
