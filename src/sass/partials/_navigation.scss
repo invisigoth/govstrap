@@ -181,13 +181,9 @@ nav#navigation {
           font-size: 1.2em;
           display: block;
           font-family: "Roboto Condensed", Arial, sans-serif;
-          &.active, &.active-trail {
-            color: $ncaOrange;
-            background: lighten($ncaBlue, 50%);
-          }
           &:hover, &:active {
             text-decoration: none;
-            background: lighten($ncaBlue, 30%);
+            background: lighten($ncaBlue, 10%);
             color: $ncaBlack;
           }
         }
@@ -203,17 +199,13 @@ nav#navigation {
       }
       & > li {
         a {
-          color: lighten($ncaGreen, 20%);
-          background: darken($ncaBlue, 20%);
+          color: $ncaWhite;
+          background: $ncaBlue;
           display: block;
           padding: 15px;
-          &:before {
-            content: "\ea40";
-            font-family: "govstrap-icons";
-            padding-right: 5px;
-          }
+          text-transform: uppercase;
           &:hover {
-            background: darken($ncaBlue, 25%);
+            background: darken($ncaBlue, 10%);
           }
         }
       }
@@ -221,19 +213,28 @@ nav#navigation {
   }
   #block-menu-block-1 {
     .menu-block-wrapper > ul.menu > li {
-      background: $ncaBlue;
+      background: lighten($ncaBlue, 30%);
       & > a {
         padding: 15px;
-        text-transform: uppercase;
+        color: $ncaBlack;
       }
     }
-    .menu-block-wrapper > ul > li.active-trail > ul {
-      background: lighten($ncaBlue, 50%);
-      & > li {
-        & > a {
-          padding: 15px;
-          padding-left: 30px;
-          color: $ncaBlack;
+    .menu-block-wrapper > ul > li.active-trail {
+      a {
+        background: lighten($ncaBlue, 50%);
+        &:hover, &:active {
+          background: lighten($ncaBlue, 10%);
+        }
+      }
+      & > ul {
+        background: lighten($ncaBlue, 50%);
+        & > li {
+          & > a {
+            padding: 15px;
+            padding-left: 30px;
+            color: $ncaBlack;
+            font-size: 1.1em;
+          }
         }
       }
     }
