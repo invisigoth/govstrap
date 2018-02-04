@@ -98,6 +98,26 @@ html {
         background: $ncaWhite;
         margin: 0;
         padding: 30px calc(10% - 30px);
+        #page-content {
+          img {
+            max-width: 100%;
+          }
+          .field-name-field-feature-image {
+            img {
+              margin-bottom: 15px;
+              border-bottom: 5px solid $ncaBlue;
+            }
+          }
+          .field-name-body {
+            ul {
+              // Override those inline styles
+              margin-left: 0 !important;
+              & > li {
+                list-style-type: square;
+              }
+            }
+          }
+        }
       }
     }
   }
