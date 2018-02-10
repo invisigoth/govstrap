@@ -14,6 +14,7 @@
     a {
       display: block;
       img {
+        max-width: 660px;
         -moz-transition: all 0.3s;
         -webkit-transition: all 0.3s;
         transition: all 0.3s;
@@ -29,7 +30,7 @@
         padding: 15px 30px;
         width: 100%;
         color: $ncaWhite;
-        background: $ncaOrange;
+
         &:after {
           font-family: govstrap-icons;
           content: "\e902";
@@ -40,14 +41,29 @@
           margin-top: -10px;
           font-size: 22px;
         }
-        &:hover {
-          background: darken($ncaOrange, 5%);
-        }
       }
     }
   }
   .landing-tile.with-link {
     margin-bottom: 15px;
+  }
+  .col-1st .landing-tile a .landing-cta {
+    background: $ncaOrange;
+    &:hover {
+      background: darken($ncaOrange, 5%);
+    }
+  }
+  .col-2nd .landing-tile a .landing-cta {
+    background: $ncaBlue;
+    &:hover {
+      background: darken($ncaBlue, 5%);
+    }
+  }
+  .col-3rd .landing-tile a .landing-cta {
+    background: $ncaGreen;
+    &:hover {
+      background: darken($ncaGreen, 5%);
+    }
   }
   .list-tours {
     height: 345px;

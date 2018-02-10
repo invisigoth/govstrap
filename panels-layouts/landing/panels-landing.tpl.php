@@ -33,13 +33,13 @@
         </div>
     </div>
     <div class="row landing-panel-row-3-col">
-        <div class="col-sm-12 col-md-4">
+        <div class="col-1st col-sm-12 col-md-4">
           <?php print $content['row-2-col-1']; ?>
         </div>
-        <div class="col-sm-12 col-md-4">
+        <div class="col-2nd col-sm-12 col-md-4">
           <?php print $content['row-2-col-2']; ?>
         </div>
-        <div class="col-sm-12 col-md-4">
+        <div class="col-3rd col-sm-12 col-md-4">
           <?php print $content['row-2-col-3']; ?>
         </div>
     </div>
