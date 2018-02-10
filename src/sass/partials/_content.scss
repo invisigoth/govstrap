@@ -49,21 +49,23 @@ html {
       border-bottom: none;
     }
     main {
+      .highlighted.hl-negative-bottom-margin {
+        margin-bottom: -60px;
+      }
       .highlighted {
         background: $ncaWhite;
         padding: 0;
-        margin-bottom: -60px;
         .section_banner {
           overflow: hidden;
         }
         // We want to display the title (H1) at the middle of the banner image
         h1 {
           position: absolute;
-          top: 180px;
           padding-left: 99px;
           color: $ncaWhite;
           text-shadow: 2px 2px 4px $ncaBlack;
           max-width: 752px;
+          top: 120px;
         }
         // We want to display the breadcrumbs at the bottom of the section banner image
         .block-crumbs {
@@ -115,6 +117,27 @@ html {
               & > li {
                 list-style-type: square;
               }
+            }
+          }
+        }
+        // Event venue
+        .ds-event-venue {
+          .col-left.col-md-6, .col-right.col-md-6 {
+            padding: 0;
+            .field-name-field-feature-image {
+              img {
+                height: 330px;
+                width: 309px;
+                @media screen and (max-width: $screen-sm-max) {
+                  width: 100%;
+                }
+              }
+            }
+            iframe {
+              height: 330px;
+              width: 309px;
+              margin-bottom: 15px;
+              border-bottom: 5px solid #187eab;
             }
           }
         }

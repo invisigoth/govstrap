@@ -3,6 +3,9 @@ html {
     // Some exceptions...
     .highlighted {
       margin-bottom: 0;
+      h1 {
+        top: 180px;
+      }
     }
     #content {
       padding: 0;
