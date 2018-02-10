@@ -24,7 +24,7 @@
             <?php endif; ?>
           <?php else: ?>
             <?php
-            $default_header_block = module_invoke('bean', 'block_view', 'section-banner-about-the-nca');
+            $default_header_block = module_invoke('bean', 'block_view', 'section-banner-default');
             print render($default_header_block['content']);
             ?>
           <?php endif; ?>
