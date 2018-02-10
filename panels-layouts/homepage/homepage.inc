@@ -24,4 +24,3 @@ $plugin = array(
     'row-5-col-3' => t('Row 5 Col 3'),
   ),
 );
-

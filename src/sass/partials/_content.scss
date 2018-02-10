@@ -51,6 +51,9 @@ html {
     main {
       .highlighted.hl-negative-bottom-margin {
         margin-bottom: -60px;
+        h1 {
+          top: 120px;
+        }
       }
       .highlighted {
         background: $ncaWhite;
@@ -65,7 +68,7 @@ html {
           color: $ncaWhite;
           text-shadow: 2px 2px 4px $ncaBlack;
           max-width: 752px;
-          top: 120px;
+          top: 140px;
         }
         // We want to display the breadcrumbs at the bottom of the section banner image
         .block-crumbs {

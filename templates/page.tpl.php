@@ -14,12 +14,7 @@
 
 <main>
     <div id="main" class="main-container <?php print $container_class; ?>">
-      <?php
-      if (!empty($breadcrumb)) {
-        $highlight_extra_class = 'hl-negative-bottom-margin';
-      }
-      ?>
-        <div class="highlighted <?php print $highlight_extra_class; ?>">
+        <div class="<?php print $highlighted_class; ?>">
           <?php if (!empty($page['highlighted'])): ?>
             <?php print render($page['highlighted']); ?>
             <?php if (!empty($breadcrumb)): ?>

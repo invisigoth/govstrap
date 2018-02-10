@@ -112,6 +112,12 @@ function govstrap_preprocess_page(&$variables) {
   else {
     $variables['content_column_class'] = 'col-sm-12';
   }
+  // Decide if we need negative bottom margin for the highlight region
+  if (!empty($variables['breadcrumb'])) {
+    $variables['highlighted_class'] = 'highlighted hl-negative-bottom-margin';
+  } else {
+    $variables['highlighted_class'] = 'highlighted';
+  }
 }
 
 /**
