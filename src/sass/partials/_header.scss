@@ -39,6 +39,7 @@ html {
                 @media screen and (max-width: $screen-xs-max) {
                   width: 200px;
                   height: 46px;
+                  padding-left: 15px;
                 }
               }
             }
@@ -62,21 +63,18 @@ html {
               margin-right: 0;
             }
           }
-          #topbar-menu {
-            @media screen and (min-width: $screen-sm-min) {
-              background: $ncaBlue;
-              &:hover {
-                background: darken($ncaBlue, 5%);
-              }
-              #nav-toggle-burger {
-                display: none;
-              }
-            }
+          #topbar-menu, #topbar-contact {
             @media screen and (max-width: $screen-xs-max) {
+              margin-left: -15px;
+              margin-right: 15px;
               a {
                 i {
                   font-size: 26px;
-                  color: $ncaBlue;
+                  &:before {
+                    display: block;
+                    margin-right: 0;
+                    width: 100%;
+                  }
                 }
                 font-size: 14px;
                 text-transform: uppercase;
@@ -85,6 +83,21 @@ html {
                 top: 0;
                 right: 0;
                 position: absolute;
+              }
+            }
+          }
+          #topbar-menu {
+            @media screen and (min-width: $screen-sm-min) {
+              background: $ncaBlue;
+              &:hover {
+                background: darken($ncaBlue, 5%);
+              }
+            }
+            @media screen and (max-width: $screen-xs-max) {
+              a {
+                i {
+                  color: $ncaBlue;
+                }
               }
             }
           }
@@ -98,16 +111,8 @@ html {
             @media screen and (max-width: $screen-xs-max) {
               a {
                 i {
-                  font-size: 26px;
                   color: $ncaGreen;
                 }
-                font-size: 14px;
-                text-transform: uppercase;
-                line-height: 22px;
-                padding-top: 20px;
-                top: 0;
-                left: 0;
-                position: absolute;
               }
             }
           }
@@ -129,8 +134,7 @@ html {
                   border-radius: $borderRadius 0 0 $borderRadius;
                   border-right: 0 !important;
                   &:focus {
-                    background: $ncaWhite !important;
-                    color: $darkGrey !important;
+                    color: $ncaWhite !important;
                   }
                   @media screen and (min-width: $screen-md-min) {
                     width: 220px;
