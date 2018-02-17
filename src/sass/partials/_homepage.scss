@@ -18,7 +18,7 @@ html {
       font-size: 20px;
       background: $lightGrey;
       color: $ncaWhite;
-      padding: 0 calc(10% - 15px);
+      padding: 0 calc(10% - 30px);
       min-height: 60px;
       line-height: 60px;
       a {
@@ -28,9 +28,6 @@ html {
         color: $ncaBlack;
         font-weight: 300;
         font-size: 22px;
-      }
-      .link {
-        padding: 0 5px;
       }
       @media screen and (max-width: $screen-sm-max) {
         text-align: center;
@@ -52,13 +49,15 @@ html {
           padding: 10px 0;
           &:first-of-type {
             border-top: 1px solid $mediumGrey;
-            border-bottom: 1px solid $mediumGrey;
           }
         }
       }
       .col-sm-12 {
         padding-left: 0;
         padding-right: 0;
+      }
+      @media screen and (max-width: $screen-sm-max) {
+        border-bottom: 1px solid $mediumGrey;
       }
     }
     .panel-nca-front {
