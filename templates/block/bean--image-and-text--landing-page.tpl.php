@@ -38,7 +38,6 @@ $block_image = theme('image_style', array('style_name' => 'nca_square', 'path' =
   <?php if (!empty($block_link)): ?>
       <div class="content landing-tile with-link"<?php print $content_attributes; ?>>
           <a href="<?php print $block_link; ?>" title="<?php print $block_title; ?>">
-              <h2><?php print $block_title; ?></h2>
             <?php print $block_image; ?>
               <div class="landing-cta"><?php print $block_title; ?></div>
           </a>
