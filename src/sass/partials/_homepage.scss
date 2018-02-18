@@ -85,9 +85,12 @@ html {
     .row-header {
       text-align: center;
     }
-    .pane-media-releases {
+    .pane-media-releases, .pane-new-road-and-lake-closures {
       margin-bottom: 30px;
-      .node-media-release {
+      .pane-title {
+        margin-top: 0;
+      }
+      .node-media-release, .node-closure {
         margin-bottom: 1em;
         .group-left {
           width: 12%;
@@ -96,11 +99,9 @@ html {
             @media screen and (max-width: $screen-sm-max) {
               padding: 7px;
             }
-            border: 2px solid $ncaBlue;
             border-radius: 28px;
             text-align: center;
             color: $ncaWhite;
-            background: $ncaBlue;
             line-height: 16px;
           }
         }
@@ -127,6 +128,17 @@ html {
           }
         }
       }
+      .node-media-release {
+        .field-type-datetime {
+          border: 2px solid $ncaBlue;
+          background: $ncaBlue;
+        }
+      } .node-closure {
+        .field-type-datetime {
+          border: 2px solid $ncaOrange;
+          background: $ncaOrange;
+        }
+      }
     }
     // Homepage panel: wide image
     .wide-image {
@@ -138,6 +150,7 @@ html {
         max-width: 90%;
         @media screen and (max-width: $screen-xs-max) {
           padding-left: calc(10% - 10px);
+          font-size: 26px;
         }
         @media screen and (min-width: $screen-sm-min) {
           top: calc(50% - 140px);

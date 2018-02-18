@@ -18,7 +18,7 @@ html {
     a {
       color: darken($ncaBlue, 5%);
     }
-    a:not([href*='nca.gov.au']):not([href*='.local']):not([href^='#']):not([href^='/']):after {
+    a:not([href*='nca.gov.au']):not([href*='.local']):not([href*='govcms.gov.au']):not([href^='#']):not([href^='/']):after {
       font-family: "govstrap-icons";
       content: "\f001";
       margin-left: 5px;
