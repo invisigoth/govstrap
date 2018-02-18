@@ -16,7 +16,7 @@ html {
     }
     // Links
     a {
-      color: darken($ncaBlue, 5%);
+      color: $ncaBlue;
     }
     a:not([href*='nca.gov.au']):not([href*='.local']):not([href*='govcms.gov.au']):not([href^='#']):not([href^='/']):after {
       font-family: "govstrap-icons";
@@ -42,6 +42,36 @@ html {
             position: absolute;
             margin-left: -15px;
           }
+        }
+      }
+    }
+    // Call to action
+    .nca-cta {
+      margin-left: 0;
+      margin-right: 0;
+      margin-top: 15px;
+      @media screen and (max-width: $screen-sm-max) {
+        margin-bottom: 15px;
+      }
+      a {
+        display: block;
+        background: $ncaOrange;
+        padding: 1em 32px 1em 1em;
+        color: $ncaWhite;
+        position: relative;
+        &:after {
+          font-family: govstrap-icons;
+          content: "\e902";
+          display: inline-block;
+          right: 0.5em;
+          position: absolute;
+          top: 50%;
+          margin-top: -10px;
+          font-size: 22px;
+        }
+        &:hover {
+          text-decoration: none;
+          background: darken($ncaOrange, 5%);
         }
       }
     }

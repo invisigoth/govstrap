@@ -75,7 +75,7 @@ html {
     .twitter-link {
       padding-left: 10px;
       a {
-        color: $ncaOrange;
+        color: $ncaGreen;
       }
     }
     // Homepage panel: news and updates
@@ -289,39 +289,10 @@ html {
         margin-bottom: 15px;
       }
       a {
-        color: $ncaOrange;
+        color: $ncaGreen;
         &:after {
           font-family: govstrap-icons;
           content: "\ea3c";
-        }
-      }
-    }
-    .nca-cta {
-      margin-left: 0;
-      margin-right: 0;
-      margin-top: 15px;
-      @media screen and (max-width: $screen-sm-max) {
-        margin-bottom: 15px;
-      }
-      a {
-        display: block;
-        background: $ncaOrange;
-        padding: 1em 32px 1em 1em;
-        color: $ncaWhite;
-        position: relative;
-        &:after {
-          font-family: govstrap-icons;
-          content: "\e902";
-          display: inline-block;
-          right: 0.5em;
-          position: absolute;
-          top: 50%;
-          margin-top: -10px;
-          font-size: 22px;
-        }
-        &:hover {
-          text-decoration: none;
-          background: darken($ncaOrange, 5%);
         }
       }
     }
