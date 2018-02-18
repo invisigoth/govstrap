@@ -1,102 +1,136 @@
-.panel-nca-landing {
-  .landing-tile {
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    h2 {
-      position: absolute;
-      z-index: 99;
-      color: $ncaWhite;
-      font-size: 28px;
-      text-shadow: 2px 2px 2px $ncaBlack;
-      padding: 30px 60px 0 30px;
-    }
-    a {
-      display: block;
-      img {
-        max-width: 660px;
-        -moz-transition: all 0.3s;
-        -webkit-transition: all 0.3s;
-        transition: all 0.3s;
-        &:hover {
-          -moz-transform: scale(1.1);
-          -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-        }
-      }
-      .landing-cta {
-        position: absolute;
-        bottom: 0;
-        padding: 15px 30px;
-        width: 100%;
-        color: $ncaWhite;
-
-        &:after {
-          font-family: govstrap-icons;
-          content: "\e902";
-          display: inline-block;
-          right: 15px;
-          position: absolute;
-          top: 50%;
-          margin-top: -10px;
-          font-size: 22px;
-        }
-      }
-    }
-  }
-  .landing-tile.with-link {
-    margin-bottom: 15px;
-  }
-  .col-1st .landing-tile a .landing-cta {
-    background: $ncaOrange;
-    &:hover {
-      background: darken($ncaOrange, 5%);
-    }
-  }
-  .col-2nd .landing-tile a .landing-cta {
-    background: $ncaBlue;
-    &:hover {
-      background: darken($ncaBlue, 5%);
-    }
-  }
-  .col-3rd .landing-tile a .landing-cta {
-    background: $ncaGreen;
-    &:hover {
-      background: darken($ncaGreen, 5%);
-    }
-  }
-  .list-tours {
-    height: 345px;
-    background: $ncaGreen;
-    .tour {
+html body main #content #page-content {
+  .panel-nca-landing {
+    .landing-tile {
       position: relative;
+      max-width: 100%;
+      overflow: hidden;
+      h2 {
+        position: absolute;
+        z-index: 99;
+        color: $ncaWhite;
+        font-size: 28px;
+        text-shadow: 2px 2px 2px $ncaBlack;
+        padding: 30px 60px 0 30px;
+      }
       a {
         display: block;
-        padding: 15px 30px;
-        color: $ncaWhite;
-        padding-right: 60px;
-        border-bottom: 1px solid $ncaWhite;
-        &:hover {
-          text-decoration: none;
+        img {
+          max-width: 660px;
+          -moz-transition: all 0.3s;
+          -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+          &:hover {
+            -moz-transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+          }
         }
-        &:after {
-          font-family: govstrap-icons;
-          content: "\e902";
-          display: inline-block;
-          right: 15px;
+        .landing-cta {
           position: absolute;
-          top: 50%;
-          margin-top: -10px;
-          font-size: 22px;
-        }
-        &:hover {
-          background: darken($ncaGreen, 5%);
+          bottom: 0;
+          padding: 15px 30px;
+          width: 100%;
+          color: $ncaWhite;
+
+          &:after {
+            font-family: govstrap-icons;
+            content: "\e902";
+            display: inline-block;
+            right: 15px;
+            position: absolute;
+            top: 50%;
+            margin-top: -10px;
+            font-size: 22px;
+          }
         }
       }
     }
-    .tour:last-of-type a {
-      border-bottom: none;
+    .landing-tile.with-link {
+      margin-bottom: 15px;
+    }
+    .col-1st .landing-tile a .landing-cta {
+      background: $ncaOrange;
+      &:hover {
+        background: darken($ncaOrange, 5%);
+      }
+    }
+    .col-2nd .landing-tile a .landing-cta {
+      background: $ncaBlue;
+      &:hover {
+        background: darken($ncaBlue, 5%);
+      }
+    }
+    .col-3rd .landing-tile a .landing-cta {
+      background: $ncaGreen;
+      &:hover {
+        background: darken($ncaGreen, 5%);
+      }
+    }
+    .list-tours {
+      height: 345px;
+      background: $ncaGreen;
+      .tour {
+        position: relative;
+        a {
+          display: block;
+          padding: 15px 30px;
+          color: $ncaWhite;
+          padding-right: 60px;
+          border-bottom: 1px solid $ncaWhite;
+          &:hover {
+            text-decoration: none;
+          }
+          &:after {
+            font-family: govstrap-icons;
+            content: "\e902";
+            display: inline-block;
+            right: 15px;
+            position: absolute;
+            top: 50%;
+            margin-top: -10px;
+            font-size: 22px;
+          }
+          &:hover {
+            background: darken($ncaGreen, 5%);
+          }
+        }
+      }
+      .tour:last-of-type a {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .list-attractions {
+    margin-left: -15px;
+    margin-right: -15px;
+    .attraction-tile {
+      .field-name-field-feature-image {
+        overflow: hidden;
+        img {
+          margin-bottom: 0;
+          border-bottom: none;
+          -moz-transition: all 0.3s;
+          -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+          &:hover {
+            -moz-transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+          }
+        }
+      }
+      .field-name-title {
+        background: $lightGrey;
+        a {
+          color: $ncaBlack;
+          text-decoration: none;
+          padding: 10px 30px;
+          display: block;
+          min-height: 64px;
+        }
+      }
+      margin-bottom: 15px;
     }
   }
 }
-

@@ -180,7 +180,7 @@ html {
           }
         }
         // Event venue
-        .ds-event-venue {
+        .ds-event-venue, .ds-attractions {
           .col-left.col-md-6, .col-right.col-md-6 {
             padding: 0;
             .field-name-field-feature-image {
@@ -196,7 +196,7 @@ html {
               height: 330px;
               width: 309px;
               margin-bottom: 15px;
-              border-bottom: 5px solid #187eab;
+              border-bottom: 5px solid #187eab !important;
             }
           }
         }
