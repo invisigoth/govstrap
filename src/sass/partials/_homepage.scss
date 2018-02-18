@@ -282,20 +282,6 @@ html {
         font-size: 26px;
       }
     }
-    .more-link {
-      text-align: left;
-      margin-top: 1em;
-      @media screen and (max-width: $screen-sm-max) {
-        margin-bottom: 15px;
-      }
-      a {
-        color: $ncaGreen;
-        &:after {
-          font-family: govstrap-icons;
-          content: "\ea3c";
-        }
-      }
-    }
     // Carousel
     #homepage-carousel {
       .carousel-inner {

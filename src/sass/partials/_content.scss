@@ -24,6 +24,22 @@ html {
       margin-left: 5px;
       font-size: 12px;
     }
+    // 'More' link
+    .more-link {
+      text-align: left;
+      margin-top: 1em;
+      @media screen and (max-width: $screen-sm-max) {
+        margin-bottom: 15px;
+      }
+      a {
+        color: $ncaGreen;
+        &:after {
+          padding-left: 5px;
+          font-family: govstrap-icons;
+          content: "\ea3c";
+        }
+      }
+    }
     // Iframes
     iframe {
       max-width: 100%;
