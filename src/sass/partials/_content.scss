@@ -153,6 +153,16 @@ html {
             }
           }
         }
+        // Table
+        table {
+          max-width: 100% !important;
+          th, td {
+            padding: 5px;
+          }
+          tbody {
+            border: 1px solid $mediumGrey
+          }
+        }
         // Event venue
         .ds-event-venue {
           .col-left.col-md-6, .col-right.col-md-6 {
