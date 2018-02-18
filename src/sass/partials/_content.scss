@@ -91,6 +91,15 @@ html {
         }
       }
     }
+    // Date range appeared on road closure pages
+    .node-closure {
+      .field-name-field-date-and-time {
+        color: $ncaOrange;
+        .date-display-range {
+          display: inline;
+        }
+      }
+    }
     .page-header {
       border-bottom: none;
     }
