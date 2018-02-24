@@ -12,10 +12,12 @@ html body main #content #page-content {
         text-shadow: 2px 2px 2px $ncaBlack;
         padding: 30px 60px 0 30px;
       }
+      img {
+        max-width: 660px;
+      }
       a {
         display: block;
         img {
-          max-width: 660px;
           -moz-transition: all 0.3s;
           -webkit-transition: all 0.3s;
           transition: all 0.3s;
@@ -31,7 +33,6 @@ html body main #content #page-content {
           padding: 15px 30px;
           width: 100%;
           color: $ncaWhite;
-
           &:after {
             font-family: govstrap-icons;
             content: "\e902";
@@ -42,6 +43,37 @@ html body main #content #page-content {
             margin-top: -10px;
             font-size: 22px;
           }
+        }
+      }
+      .list-ctas {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        a {
+          display: block;
+          position: relative;
+          padding: 15px 35px;
+          width: 100%;
+          color: $ncaWhite;
+          background: $ncaGreen;
+          text-decoration: none;
+          border-bottom: 1px solid $ncaWhite;
+          &:hover {
+            background: darken($ncaGreen, 5%);
+          }
+          &:after {
+            font-family: govstrap-icons;
+            content: "\e902";
+            display: inline-block;
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            margin-top: -10px;
+            font-size: 22px;
+          }
+        }
+        div:last-of-type a {
+          border-bottom: none;
         }
       }
     }

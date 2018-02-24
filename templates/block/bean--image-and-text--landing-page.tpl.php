@@ -28,11 +28,13 @@
  */
 ?>
 <?php
-if (isset($content["field_bean_image"]['#object']->field_link_to['und'][0]['url'])) {
-  $block_link = $content["field_bean_image"]['#object']->field_link_to['und'][0]['url'];
+if (isset($content["field_bean_image"]['#object']->field_link_to[LANGUAGE_NONE][0]['url'])) {
+  $block_link = $content["field_bean_image"]['#object']->field_link_to[LANGUAGE_NONE][0]['url'];
 }
+
 $block_title = $content["field_bean_image"]['#object']->title;
 $block_image = theme('image_style', array('style_name' => 'nca_square', 'path' => $content["field_bean_image"]['#object']->field_bean_image['und'][0]['uri']));
+$block_text = $content["field_bean_image"]['#object']->field_bean_text[LANGUAGE_NONE][0]['value'];
 ?>
 <div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <?php if (!empty($block_link)): ?>
@@ -46,6 +48,7 @@ $block_image = theme('image_style', array('style_name' => 'nca_square', 'path' =
       <div class="content landing-tile"<?php print $content_attributes; ?>>
           <h2><?php print $block_title; ?></h2>
         <?php print $block_image; ?>
+        <?php print $block_text; ?>
       </div>
   <?php endif; ?>
 </div>
