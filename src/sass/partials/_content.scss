@@ -24,6 +24,10 @@ html {
       margin-left: 5px;
       font-size: 12px;
     }
+    a:not([href]):after {
+      display: none;
+      visibility: hidden;
+    }
     // 'More' link
     .more-link {
       text-align: left;
@@ -161,6 +165,7 @@ html {
         #page-content {
           img {
             max-width: 100%;
+            height: auto;
           }
           .field-name-field-feature-image {
             img {
@@ -174,6 +179,13 @@ html {
               margin-left: 0 !important;
               & > li {
                 list-style-type: square;
+              }
+            }
+            // Box
+            .box {
+              border: 1px solid $mediumGrey;
+              ul, ol {
+                margin-left: 20px !important;
               }
             }
           }
@@ -210,6 +222,14 @@ html {
           }
         }
       }
+    }
+  }
+  body.node-type-book {
+    p:empty {
+      height: 0;
+      width: 0;
+      margin: 0;
+      padding: 0;
     }
   }
 }
