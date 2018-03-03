@@ -41,3 +41,17 @@ function govstrap_breadcrumb($variables) {
     return $breadcrumbs;
   }
 }
+
+/**
+ * Returns HTML for remaining message.
+ */
+function govstrap_date_display_remaining($variables) {
+  $remaining_days = $variables['remaining_days'];
+  $output = '';
+  $show_remaining_text = t('Close in less than 1 day.');
+  if ($remaining_days) {
+    $show_remaining_text = format_plural($remaining_days, 'Close in 1 day', 'Close in @count days');
+  }
+
+  return '<div class="date-display-remaining"><span class="date-display-remaining">' . $show_remaining_text . '</span></div>';
+}
