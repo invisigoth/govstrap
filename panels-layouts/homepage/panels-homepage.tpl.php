@@ -62,6 +62,7 @@
         </div>
     </div>
     <div class="row homepage-panel-row-3-col">
+        <div class="row-header"><h2>Your National Capital</h2></div>
         <div class="col-sm-12 col-md-4">
           <?php print $content['row-5-col-1']; ?>
         </div>
