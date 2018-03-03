@@ -18,9 +18,9 @@
           <?php if (!empty($page['highlighted'])): ?>
             <?php print render($page['highlighted']); ?>
             <?php if (!empty($breadcrumb)): ?>
-              <div class="block-crumbs">
-                <?php print $breadcrumb; ?>
-              </div>
+                  <div class="block-crumbs">
+                    <?php print $breadcrumb; ?>
+                  </div>
             <?php endif; ?>
           <?php else: ?>
             <?php
@@ -59,6 +59,9 @@
             </section>
           <?php if (!empty($page['sidebar_second'])): ?>
               <aside class="col-sm-4" role="complementary">
+                  <div class="menu-block-wrapper menu-block-active-parent menu-name-main-menu">
+                    <?php print $active_page_parent; ?>
+                  </div>
                 <?php print render($page['sidebar_second']); ?>
               </aside>  <!-- /#sidebar-second -->
           <?php endif; ?>

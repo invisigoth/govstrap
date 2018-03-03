@@ -43,6 +43,7 @@ function govstrap_process_page(&$variables) {
   // Accessibility settings.
   $variables['skip_link_anchor'] = check_plain(theme_get_setting('govstrap_skip_link_anchor'));
   $variables['skip_link_text'] = check_plain(theme_get_setting('govstrap_skip_link_text'));
+  $variables['active_page_parent'] = _get_active_page_parent();
 }
 
 /**
@@ -51,4 +52,19 @@ function govstrap_process_page(&$variables) {
 function govstrap_process_block(&$variables, $hook) {
   // Drupal 7 should use a $title variable instead of $block->subject.
   $variables['title'] = isset($variables['block']->subject) ? $variables['block']->subject : '';
+}
+
+function _get_active_page_parent() {
+  // Determine current page's parent
+  $active_page_parent = '';
+  $active_trail = menu_get_active_trail();
+  if ($active_trail) {
+    end($active_trail);
+    $parent = prev($active_trail);
+    $active_page_parent .= '<ul class="menu">';
+    $active_page_parent .= '<li class="leaf active-trail">';
+    $active_page_parent .= l($parent['link_title'], $parent['link_path'], array('attributes' => array('class' => 'active-trail')));
+    $active_page_parent .= '</li></ul>';
+  }
+  return $active_page_parent;
 }

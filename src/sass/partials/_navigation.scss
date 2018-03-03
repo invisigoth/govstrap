@@ -162,11 +162,32 @@ nav#navigation {
   }
 }
 
-// Sidebar menu
-.region-sidebar-second {
-  @media (max-width: $screen-sm-max) {
-    margin-top: 30px;
+// Sidebar menus
+// current page's parent - we only want to display the one in the active trail
+.menu-block-active-parent > ul.menu {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  & > li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    a {
+      color: $ncaWhite;
+      background: $ncaBlue;
+      font-family: "Roboto Condensed", Arial, sans-serif;
+      font-size: 1.2em;
+      display: block;
+      padding: 15px;
+      text-transform: uppercase;
+      text-decoration: none;
+      &:hover {
+        background: darken($ncaBlue, 10%);
+      }
+    }
   }
+}
+.region-sidebar-second {
   .block-menu-block {
     ul.menu {
       list-style: none;
@@ -185,27 +206,6 @@ nav#navigation {
             text-decoration: none;
             background: lighten($ncaBlue, 10%);
             color: $ncaBlack;
-          }
-        }
-      }
-    }
-  }
-  // 1st level menu item, we only want to display the one in the active trail
-  #block-menu-block-3 {
-    .menu-block-wrapper > ul.menu {
-      margin-bottom: 0;
-      & > li:not(.active-trail) {
-        display: none;
-      }
-      & > li {
-        a {
-          color: $ncaWhite;
-          background: $ncaBlue;
-          display: block;
-          padding: 15px;
-          text-transform: uppercase;
-          &:hover {
-            background: darken($ncaBlue, 10%);
           }
         }
       }

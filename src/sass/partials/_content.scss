@@ -200,24 +200,33 @@ html {
             border: 1px solid $mediumGrey
           }
         }
-        // Event venue
+        // Event venue and attractions
         .ds-event-venue, .ds-attractions {
-          .col-left.col-md-6, .col-right.col-md-6 {
-            padding: 0;
-            .field-name-field-feature-image {
-              img {
-                height: 330px;
-                width: 330px;
-                @media screen and (max-width: $screen-sm-max) {
-                  width: 100%;
+          .ds-2-col {
+            border-bottom: 5px solid #187eab;
+            float: left;
+            margin-bottom: 15px;
+            p {
+              margin: 0;
+              height: 1px;
+            }
+            .col-left.col-md-6, .col-right.col-md-6 {
+              padding: 0;
+              .field-name-field-feature-image {
+                img {
+                  margin-bottom: 0 !important;
+                  max-width: 330px !important;
+                  border-bottom: none !important;
+                  width: 330px;
+                  @media screen and (max-width: $screen-sm-max) {
+                    width: 100%;
+                  }
                 }
               }
-            }
-            iframe {
-              height: 330px;
-              width: 330px;
-              margin-bottom: 15px;
-              border-bottom: 5px solid #187eab !important;
+              iframe {
+                height: 330px;
+                width: 330px;
+              }
             }
           }
         }
