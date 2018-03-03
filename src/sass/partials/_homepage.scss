@@ -188,6 +188,20 @@ html {
       // Tri-colour link cluster
       .field-name-field-bean-text {
         .tri-colour-links {
+          li {
+            @media screen and (min-width: $screen-md-min) {
+              width: 33.3333%;
+            }
+          }
+        }
+        .bi-colour-links {
+          li {
+            @media screen and (min-width: $screen-md-min) {
+              width: 50%;
+            }
+          }
+        }
+        .tri-colour-links, .bi-colour-links {
           list-style: none;
           padding: 0;
           margin-top: 5px;
@@ -196,15 +210,12 @@ html {
             margin-bottom: -22px;
           }
           li {
-            display: inline-block;
-            position: relative;
-            height: 74px;
-            @media screen and (min-width: $screen-md-min) {
-              width: 33.3333%;
-            }
             @media screen and (max-width: $screen-sm-max) {
               width: 100%;
             }
+            display: inline-block;
+            position: relative;
+            height: 74px;
             &.nca-blue {
               background: $ncaBlue;
               &:hover {
