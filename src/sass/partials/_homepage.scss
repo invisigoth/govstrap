@@ -88,28 +88,34 @@ html {
         font-size: 30px !important;
       }
     }
-    .pane-media-releases, .pane-new-road-and-lake-closures {
+    .pane-media-releases, .pane-new-road-and-lake-closures, .pane-public-consultations {
       margin-bottom: 30px;
-      .pane-title {
-        margin-top: 0;
-      }
       .node-media-release, .node-closure {
-        margin-bottom: 1em;
         .group-left {
           width: 12%;
+        }
+        .group-right {
+          width: 88%;
+        }
+      }
+      .node-consultation {
+        .group-left {
+          width: 18%;
+        }
+        .group-right {
+          width: 82%;
+        }
+      }
+      .node-media-release, .node-closure, .node-consultation {
+        margin-bottom: 1em;
+        .group-left {
           .field-type-datetime {
-            padding: 9px;
-            @media screen and (max-width: $screen-sm-max) {
-              padding: 7px;
-            }
-            border-radius: 28px;
             text-align: center;
             color: $ncaWhite;
             line-height: 16px;
           }
         }
         .group-right {
-          width: 88%;
           .field-name-title {
             padding-left: 15px;
             padding-top: 7px;
@@ -133,13 +139,43 @@ html {
       }
       .node-media-release {
         .field-type-datetime {
+          padding: 9px;
+          @media screen and (max-width: $screen-sm-max) {
+            padding: 7px;
+          }
+          border-radius: 28px;
           border: 2px solid $ncaBlue;
           background: $ncaBlue;
         }
-      } .node-closure {
+      }
+      .node-closure {
         .field-type-datetime {
+          padding: 9px;
+          @media screen and (max-width: $screen-sm-max) {
+            padding: 7px;
+          }
+          border-radius: 28px;
           border: 2px solid $ncaOrange;
           background: $ncaOrange;
+        }
+      }
+      .node-consultation {
+        .field-type-datetime {
+          .nca-consultation-days-remaining {
+            padding: 9px;
+            @media screen and (max-width: $screen-sm-max) {
+              padding: 7px;
+            }
+            border-radius: 28px;
+          }
+          .nca-consultation-open {
+            border: 2px solid $ncaGreen;
+            background: $ncaGreen;
+          }
+          .nca-consultation-closing-soon {
+            border: 2px solid $ncaOrange;
+            background: $ncaOrange;
+          }
         }
       }
     }

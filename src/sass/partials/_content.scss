@@ -241,4 +241,29 @@ html {
       padding: 0;
     }
   }
+  body.node-type-consultation {
+    .field-name-field-closing-date {
+      margin-bottom: 15px;
+      .nca-consultation-open, .nca-consultation-closing-soon {
+        padding: 15px;
+        color: $ncaWhite;
+        &:before {
+          font-family: "govstrap-icons";
+          padding-right: 5px;
+        }
+      }
+      .nca-consultation-open {
+        background: $ncaGreen;
+        &:before {
+          content: '\e94e';
+        }
+      }
+      .nca-consultation-closing-soon {
+        background: $ncaOrange;
+        &:before {
+          content: '\e952';
+        }
+      }
+    }
+  }
 }

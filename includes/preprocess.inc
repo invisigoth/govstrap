@@ -148,3 +148,83 @@ function govstrap_preprocess_block(&$variables, $hook) {
     $variables['theme_hook_suggestions'][] = 'block__bean__' . $bean['#bundle'];
   }
 }
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function govstrap_preprocess_field(&$vars, $hook) {
+
+  $function = __FUNCTION__ . '__' . $vars['element']['#field_name'];
+  if (function_exists($function)) {
+    $function($vars, $hook);
+  }
+
+  // Override output of closing date field.
+  if ($vars['element']['#field_name'] === 'field_closing_date') {
+    $close_date = strtotime($vars['element']['#items'][0]['value']);
+    $date = format_date($close_date, 'custom', 'j F');
+    $now = time();
+    $remaining_time = _time_diff($close_date, $now);
+
+    if ($close_date < $now) {
+      $text = t('Closed');
+      $class = 'nca-consultation-closed';
+    }
+    else {
+      switch ($vars['element']['#view_mode']) {
+
+        case 'full':
+          if ($remaining_time['days'] > 0) {
+            $text = t('This consultation closes on @date, @days remaining.', array('@date' => $date, '@days' => format_plural($remaining_time['days'], '1 day', '@count days')));
+          }
+          else {
+            $text = t('This consultation closes on closes @date, less than 1 day remaining.', array('@date' => $date));
+          }
+          break;
+
+        case 'compact':
+          if ($remaining_time['days'] > 0) {
+            $text = t('@days', array('@date' => $date, '@days' => format_plural($remaining_time['days'], '1 Day', '@count Days')));
+          }
+          else {
+            $text = t('Last Day');
+          }
+          break;
+      }
+      $class = ($remaining_time['days'] <= 3) ? 'nca-consultation-days-remaining nca-consultation-closing-soon' : 'nca-consultation-days-remaining nca-consultation-open';
+
+    }
+    $vars['items'][0]['#markup'] = '<div class="' . $class . '" title="Time remaining">' . $text . '</div>';
+  }
+}
+
+function _time_diff($t1, $t2)
+{
+  if($t1 > $t2) {
+    $time1 = $t2;
+    $time2 = $t1;
+  }
+  else {
+    $time1 = $t1;
+    $time2 = $t2;
+  }
+  $diff = array(
+    'days' => 0,
+    'hours' => 0,
+    'minutes' => 0,
+    'seconds' =>0
+  );
+  foreach (array('days','hours','minutes','seconds') as $unit) {
+    while (TRUE)       {
+      $next = strtotime("+1 $unit", $time1);
+      if($next < $time2) {
+        $time1 = $next;
+        $diff[$unit]++;
+      }
+      else {
+        break;
+      }
+    }
+  }
+  return($diff);
+}
