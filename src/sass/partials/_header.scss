@@ -10,6 +10,26 @@ html {
       border-bottom: 1px solid $lightGrey;
       text-decoration: underline;
     }
+    #to-top {
+      position: fixed;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px;
+      background: $darkGrey;
+      opacity: 0.6;
+      filter: alpha(opacity=40);
+      width: 55px;
+      height: 55px;
+      bottom: 5px;
+      right: 5px;
+      cursor: pointer;
+      color: $ncaWhite;
+      font-size: 32px;
+      text-align: center;
+      display: none;
+      padding: 10px 0 0 7px;
+      z-index: 14;
+    }
     #header {
       .navbar {
         background: $ncaBlack;

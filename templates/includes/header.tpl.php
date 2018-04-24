@@ -3,6 +3,7 @@
         <a href="#<?php print $skip_link_anchor; ?>"
            class="element-invisible element-focusable sr-only sr-only-focusable"><?php print $skip_link_text; ?></a>
     </div>
+    <div id="to-top" style="display: block;"><i class="icon-angle-up"></i></div>
 <?php endif; ?>
 <header id="header" role="banner" class="clearfix">
     <nav class="navbar">
